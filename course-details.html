@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <!-- !-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    /* body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    } */
+    h1,
+    h2 {
+      color: #343a40;
+    }
+
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #5c67f2;
+      color: #fff;
+    }
+
+    .accordion-button {
+      border: none;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0062cc, #33b5e5);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .program-card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .program-card:hover {
+      transform: scale(1.05);
+    }
+
+    .testimonials {
+      background: #f8f9fa;
+      padding: 60px 20px;
+    }
+
+    .testimonial-card {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .apply-btn {
+      background: #33b5e5;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .apply-btn:hover {
+      background: #0062cc;
+    }
+
+    /* Custom Styling */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .form-control-icon i {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      font-size: 20px;
+    }
+
+    .form-control-icon input {
+      padding-left: 35px;
+    }
+
+    .contact-box {
+      border: 2px solid #62c2ff;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      background-color: #f4faff;
+    }
+
+    .contact-box i {
+      font-size: 40px;
+      color: #62c2ff;
+    }
+
+    .contact-box h4 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .contact-box button {
+      background-color: #62c2ff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .contact-box button:hover {
+      background-color: #5aabd9;
+    }
+
+    .info-box {
+      background-color: #f7f7f7;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .info-box i {
+      font-size: 50px;
+      color: #62c2ff;
+      margin-bottom: 20px;
+    }
+
+    .info-box h4 {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .info-box p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Custom Styling */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .form-control-icon i {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      font-size: 20px;
+    }
+
+    .form-control-icon input {
+      padding-left: 35px;
+    }
+
+    .contact-box {
+      border: 2px solid #62c2ff;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      background-color: #f4faff;
+    }
+
+    .contact-box i {
+      font-size: 40px;
+      color: #62c2ff;
+    }
+
+    .contact-box h4 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .contact-box button {
+      background-color: #62c2ff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .contact-box button:hover {
+      background-color: #5aabd9;
+    }
+
+    .info-box {
+      background-color: #f7f7f7;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      text-align: center;
+      flex: 1;
+      margin-right: 15px;
+    }
+
+    .info-box i {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .info-box h4 {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .info-box p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Flexbox Layout for Horizontal Boxes */
+    .info-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .info-box-1 i {
+      color: #ff6347;
+      /* Tomato Red */
+    }
+
+    .info-box-2 i {
+      color: #32cd32;
+      /* Lime Green */
+    }
+
+    .info-box-3 i {
+      color: #ffd700;
+      /* Gold */
+    }
+
+    .info-box-4 i {
+      color: #1e90ff;
+      /* Dodger Blue */
+    }
+
+    /* certificate */
+    .certificate-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: url('img/certificate-background.jpg') no-repeat center center;
+      background-size: cover;
+      box-shadow: 0px 0px 10px rgba(13, 130, 119, 0.1);
+      border-radius: 10px;
+    }
+
+    .row {
+      align-items: center;
+    }
+
+    /* <title>Tools & Technologies</title> */
+
+    .tool-icon {
+            font-size: 3rem;
+            margin: 10px;
+            color: #333;
+        }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="section"> -->
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <img src="img/irrrr.svg" alt="InternsRoot Logo" height="70">
+      <!-- <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>InternsRoot</h2> -->
+    </a>
+    <!-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button> -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="index.html" class="nav-item nav-link active">Home</a>
+        <a href="services.html" class="nav-item nav-link">Service</a>
+        <a href="internship.html" class="nav-item nav-link">internship</a>
+        <a href="verify.html" class="nav-item nav-link">verify</a>
+        <a href="career.html" class="nav-item nav-link">Career</a>
+        <a href="bloogs.html" class="nav-item nav-link">I Root</a>
+
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu fade-down m-0">
+            <a href="about-us.html" class="dropdown-item">About Us</a>
+            <a href="team.html" class="dropdown-item">Our Team</a>
+            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+            <a href="404.html" class="dropdown-item">404 Page</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+      <a href="apply.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Apply Now<i
+          class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- <!DOCTYPE html>
+  <html lang="en">
+
+  <head> -->
+    <!-- <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Internship & Courses</title>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      </head>
+      <body> -->
+    <section class="hero bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1>Kickstart Your Career with Our Internship Programs</h1>
+        <p class="lead">Gain real-world experience, enhance your skills, and work on exciting projects with industry
+          experts.</p>
+        <a href="#apply" class="btn btn-light btn-lg mt-3">Apply Now</a>
+      </div>
+    </section>
+
+    <div class="container mt-5">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-4 text-center">
+          <img src="img/web develpment service.png" alt="Full Stack Course" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8 text-md-start">
+          <h1 class="display-5">Full Stack Web Development Course</h1>
+          <p class="lead">Master front-end and back-end development with hands-on projects, industry exposure, and
+            expert guidance.</p>
+          <button class="btn btn-primary btn-lg shadow-lg">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>Course Overview</h2>
+          <p>This course is designed to provide in-depth knowledge of full-stack web development, including HTML, CSS,
+            JavaScript, React, Node.js, MongoDB, and deployment techniques. By the end of this course, you'll be able to
+            build and deploy professional-grade web applications.</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="card p-3">
+            <h5 class="card-title">Course Highlights</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-clock"></i> <strong>Duration:</strong> 06 Weeks</li>
+              <li><i class="fas fa-level-up-alt"></i> <strong>Level:</strong> Beginner to Advanced</li>
+              <li><i class="fas fa-language"></i> <strong>Language:</strong> English</li>
+              <li><i class="fas fa-certificate"></i> <strong>Certificate:</strong> Yes</li>
+              <li><i class="fas fa-dollar-sign"></i> <strong>Price:</strong> ₹;1000</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Tools & Technologies -->
+      <div class="container my-5">
+        <!-- Tools & Technologies -->
+        <h3 class="text-center my-5">Industry-standard Tools</h3>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <i class="fab fa-html5 tool-icon"></i>
+            <i class="fab fa-css3-alt tool-icon"></i>
+            <i class="fab fa-js tool-icon"></i>
+            <i class="fab fa-react tool-icon"></i>
+            <i class="fab fa-node-js tool-icon"></i>
+            <i class="fas fa-database tool-icon"></i>
+            <i class="fab fa-git-alt tool-icon"></i>
+            <i class="fab fa-docker tool-icon"></i>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+      
+<!-- course curiculam -->
+      <h2 class="mt-5">Course Curriculum</h2>
+      <div class="accordion" id="courseAccordion">
+
+        <!-- Module 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#module1"
+              aria-expanded="true" aria-controls="module1">
+              Module 1: HTML & CSS (Frontend Basics)
+            </button>
+          </h2>
+          <div id="module1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Introduction to HTML5 (Tags, Elements, Forms)</li>
+                <li>CSS3 Basics (Selectors, Colors, Fonts)</li>
+                <li>Flexbox & Grid for Layouts</li>
+                <li>Responsive Design with Media Queries</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2"
+              aria-expanded="false" aria-controls="module2">
+              Module 2: JavaScript (Programming Basics)
+            </button>
+          </h2>
+          <div id="module2" class="accordion-collapse collapse" aria-labelledby="heading2"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>JavaScript Basics (Variables, Data Types, Operators)</li>
+                <li>Loops & Conditional Statements</li>
+                <li>Functions and Events</li>
+                <li>DOM Manipulation</li>
+                <li>ES6 Features (Arrow Functions, Template Literals, etc.)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3"
+              aria-expanded="false" aria-controls="module3">
+              Module 3: React.js (Frontend Framework)
+            </button>
+          </h2>
+          <div id="module3" class="accordion-collapse collapse" aria-labelledby="heading3"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Introduction to React & JSX</li>
+                <li>Components, Props & State</li>
+                <li>Handling Events & Forms</li>
+                <li>React Hooks (useState, useEffect)</li>
+                <li>API Integration (Fetching Data)</li>
+                <li>Deploying a React App</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4"
+              aria-expanded="false" aria-controls="module4">
+              Module 4: Backend with Node.js & Express
+            </button>
+          </h2>
+          <div id="module4" class="accordion-collapse collapse" aria-labelledby="heading4"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Introduction to Node.js & NPM</li>
+                <li>Building APIs with Express.js</li>
+                <li>Handling Requests & Responses</li>
+                <li>Connecting to a Database (MongoDB)</li>
+                <li>User Authentication (Login & Signup)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module5"
+              aria-expanded="false" aria-controls="module5">
+              Module 5: Database Management (MongoDB & SQL Basics)
+            </button>
+          </h2>
+          <div id="module5" class="accordion-collapse collapse" aria-labelledby="heading5"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Introduction to Databases</li>
+                <li>MongoDB (Documents, Collections)</li>
+                <li>SQL (Tables, Queries, Relationships)</li>
+                <li>CRUD Operations (Create, Read, Update, Delete)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module6"
+              aria-expanded="false" aria-controls="module6">
+              Module 6: Full Stack Integration
+            </button>
+          </h2>
+          <div id="module6" class="accordion-collapse collapse" aria-labelledby="heading6"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Connecting Frontend with Backend</li>
+                <li>State Management with Context API</li>
+                <li>Authentication (JWT Tokens)</li>
+                <li>Error Handling & Security Basics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module7"
+              aria-expanded="false" aria-controls="module7">
+              Module 7: Deployment & Career Preparation
+            </button>
+          </h2>
+          <div id="module7" class="accordion-collapse collapse" aria-labelledby="heading7"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Hosting Websites (Netlify, Vercel)</li>
+                <li>Deploying Backend (Render, Railway)</li>
+                <li>Git & GitHub for Version Control</li>
+                <li>Final Full Stack Project</li>
+                <li>Resume & Job Interview Tips</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module8"
+              aria-expanded="false" aria-controls="module8">
+              Module 8: Certification & Course Completion
+            </button>
+          </h2>
+          <div id="module8" class="accordion-collapse collapse" aria-labelledby="heading8"
+            data-bs-parent="#courseAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Final Project Submission</li>
+                <li>Course Assessment & Evaluation</li>
+                <li>Certification of Completion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- instoctor -->
+      <h2 class="mt-5">About the Instructor</h2>
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <img src="img/Alokp.jpeg" alt="Instructor" class="img-fluid rounded-circle shadow">
+        </div>
+        <div class="col-md-9">
+          <h4>John Doe</h4>
+          <p>John has 10+ years of experience in full-stack development and has trained over 5,000 students worldwide.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="mt-5">Student Reviews</h2>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="card p-3">
+            <img src="img/rahult.jpeg" alt="Emma" class="rounded-circle mx-auto d-block" width="80">
+            <h5>Emma</h5>
+            <p>“An excellent course with practical hands-on projects. Highly recommended!”</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3">
+            <img src="img/Alokp.jpeg" alt="Liam" class="rounded-circle mx-auto d-block" width="80">
+            <h5>Liam</h5>
+            <p>“The course structure and instructor's teaching style are outstanding.”</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3">
+            <img src="img/roshant.png" alt="Olivia" class="rounded-circle mx-auto d-block" width="80">
+            <h5>Olivia</h5>
+            <p>“Learned so much in a short time. This course exceeded my expectations.”</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3">
+            <img src="img/Alokp.jpeg" alt="Noah" class="rounded-circle mx-auto d-block" width="80">
+            <h5>Noah</h5>
+            <p>“The best investment in my learning journey. Well-structured and engaging.”</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate Section -->
+      <section class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+          <h1><i class="fas fa-award"></i> Earn a Certificate</h1>
+          <p class="lead">Earn professional certificates upon successful course completion.</p>
+        </div>
+      </section>
+
+      <div class="container mt-5">
+        <div class="certificate-container p-4">
+          <div class="row">
+            <!-- Certificate 1 -->
+            <div class="col-md-6 text-center">
+              <h2 class="mb-4"><i class="fas fa-certificate"></i> Course Completion Certificate</h2>
+              <img src="img/cer.png" alt="Certificate 1" class="img-fluid rounded shadow">
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="col-md-6 text-center">
+              <h2 class="mb-4"><i class="fas fa-certificate"></i> Internship Certificate</h2>
+              <img src="img/cer.png" alt="Certificate 2" class="img-fluid rounded shadow">
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <p class="lead"><i class="fas fa-user-graduate"></i> These certificates validate your skills and expertise,
+              helping you stand out in your career.</p>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+          </div>
+        </div>
+      </div>
+
+        <!-- FAQ Section -->
+        <h2 class="mt-5">FAQs</h2>
+        <div class="accordion" id="faqAccordion">
+
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        What is the duration of the course?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The course lasts for <strong>2 to 3 months</strong>, covering both fundamental and advanced concepts.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Is prior programming knowledge required?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, the course is beginner-friendly and covers everything from scratch.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Will I receive a certificate?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, a certificate will be awarded upon successful course completion.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        What if I miss a class?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You will have access to recorded sessions to catch up at your convenience.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Is placement assistance provided?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we provide career guidance, resume building, and interview support.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        How can I enroll?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Click on <strong>"Enroll Now"</strong> and follow the simple registration process.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5">
+
+      <div class="col-lg-3 col-sm-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+        data-aos-duration="1200" data-aos-once="false">
+        <div class="single-footer-widget">
+          <div class="logo">
+            <a aria-current="page" class="" href="/">
+              <img src="img/Iroots.png" alt="logo" width="130">
+            </a>
+          </div>
+          <p>Our goal is to empower the next generation of tech leaders.
+            Our internship program offers hands-on experience in different fields.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Quick Link</h4>
+        <a class="btn btn-link" href="">About Us</a>
+        <a class="btn btn-link" href="">Contact Us</a>
+        <a class="btn btn-link" href="">Privacy Policy</a>
+        <a class="btn btn-link" href="">Terms & Condition</a>
+        <a class="btn btn-link" href="">FAQs & Help</a>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Contact</h4>
+        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi India</p>
+        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8294624055</p>
+        <p class="mb-2"><i class="fa fa-envelope me-3"></i>internsroot@gmail.com</p>
+        <div class="d-flex pt-2">
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Newsletter</h4>
+        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+        <div class="position-relative mx-auto" style="max-width: 400px;">
+          <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+          <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="copyright">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a class="border-bottom" href="#">InternsRoot 2024</a>, All Right Reserved.
+
+          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+          <!-- Designed By <a class="border-bottom" href="#">Vivek (Ovi)</a><br><br> -->
+          Secure your Tommorow , Start Today With <a class="border-bottom" href="">InternsRoot</a>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="footer-menu">
+            <a href="">Home</a>
+            <a href="">Cookies</a>
+            <a href="">Help</a>
+            <a href="">FQAs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<a href="https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!" target="_blank"
+  class="btn btn-lg btn-primary btn-lg-square whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>

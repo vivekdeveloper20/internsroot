@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Services | InternsRoot</title>
+    <meta name="description" content="Explore the services offered by InternsRoot, including internships, technical courses, career guidance, and more to boost your career.">
+    <meta name="keywords" content="Services, InternsRoot, Internship, Technical Courses, Career Guidance, Workshops">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicon and stylesheets as in index.html -->
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hire-freelancer {
+            background: #f8f9fa;
+            padding: 40px;
+        }
+
+        .hire-btn {
+            background-color: #4facfe;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+
+        .hire-btn:hover {
+            background-color: #00c6fb;
+        }
+
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .icon-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hire-btn {
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hire-btn:hover {
+            background-color: #004085;
+            /* Slightly darker shade of primary color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .rating i {
+            font-size: 1.2rem;
+        }
+
+        .running-testimonial {
+            animation: slideIn 20s infinite linear;
+            font-style: italic;
+            color: #1baeb6;
+        }
+
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        /* Remove custom highlight for open accordion */
+        .accordion-button:not(.collapsed) {
+            background-color: #fff;
+            color: #212529;
+            box-shadow: none;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .accordion-item {
+            border: 1px solid #dee2e6;
+            border-radius: 0;
+            margin-bottom: 0.5rem;
+        }
+        .accordion-body {
+            background: #fff;
+            color: #212529;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <!-- <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5"> -->
+            <!-- <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>InternsRoot</h2> -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <img src="img/irrrr.svg" alt="InternsRoot Logo" height="70">
+            </a>
+            
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="services.html" class="nav-item nav-link">Service</a>
+                <a href="internship.html" class="nav-item nav-link">internship</a>
+                <a href="verify.html" class="nav-item nav-link">verify</a>
+                <a href="career.html" class="nav-item nav-link">Career</a>
+                <a href="bloogs.html" class="nav-item nav-link">I Root</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="about-us.html" class="dropdown-item">About Us</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="apply.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Aplly Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start with image covering the section (cover) -->
+<section class="hero-section d-flex align-items-center justify-content-center" style="position: relative; min-height: 350px; text-align: center; background: url('img/service.png') center center/cover no-repeat;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(24, 29, 56, 0.6);"></div>
+  <div class="container position-relative" style="z-index: 2;">
+    <h1 class="display-3 text-white fw-bold mb-3">Empower Your Future with InternsRoot Services</h1>
+    <p class="fs-5 text-white mb-4">Our diverse internship and course programs are designed to accelerate your career growth.</p>
+    <a href="#services-list" class="btn btn-primary py-md-3 px-md-5">Explore Services</a>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+    <!-- Service Section Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="section-title bg-white text-center text-primary px-3">Our Services</h6>
+                <h1 class="mb-5">What We Offer</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Skilled Instructors</h5>
+                            <p>Learn from experienced instructors who provide valuable insights and practical knowledge.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-laptop text-primary mb-4"></i>
+                            <h5 class="mb-3">Online Classes</h5>
+                            <p>Access high-quality online courses that can be completed from anywhere at your
+                                convenience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
+                            <h5 class="mb-3">Internship Programs</h5>
+                            <p>Gain real-world experience through our internship programs and jumpstart your career.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
+                            <h5 class="mb-3">Certification</h5>
+                            <p>Earn recognized certifications to showcase your skills and increase your employability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Section End -->
+
+    <!-- Why Choose Us Section Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">Why Choose Us?</h6>
+                    <h1 class="mb-4">InternsRoot - A Step Towards Your Future</h1>
+                    <p class="mb-4">We provide a wide range of opportunities and programs to help you grow
+                        professionally and personally. Here’s why our platform stands out:</p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Expert Mentorship</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Flexible Learning</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Practical Exposure</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Global Networking</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="#about.html">Learn More</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <img class="img-fluid" src="img/why.jpg" alt="Why Choose Us">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us Section End -->
+
+    <!-- Courses Section Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="section-title bg-white text-center text-primary px-3">Our Courses</h6>
+                <h1 class="mb-5">Explore Our Courses</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item">
+                        <img class="img-fluid w-100 mb-4" src="img/course-1.jpg" alt="Course 1">
+                        <h5 class="mb-3">Web Development</h5>
+                        <p>Master the skills of web design and development with HTML, CSS, JavaScript, and more.</p>
+                        <a href="course-details.html" class="btn btn-primary">More Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item">
+                        <img class="img-fluid w-100 mb-4" src="img/course-2.jpg" alt="Course 2">
+                        <h5 class="mb-3">Data Science</h5>
+                        <p>Learn how to analyze and visualize data using Python, R, and various machine learning
+                            techniques.</p>
+                        <a href="course-details.html" class="btn btn-primary">More Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item">
+                        <img class="img-fluid w-100 mb-4" src="img/course-3.jpg" alt="Course 3">
+                        <h5 class="mb-3">Digital Marketing</h5>
+                        <p>Learn the latest trends in SEO, social media marketing, and content strategies to grow online
+                            businesses.</p>
+                        <a href="course-details.html" class="btn btn-primary">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses Section End -->
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <h2 class="fw-bold">our exclusive service</h2>
+                <p class="text-muted">We specialize in delivering top-notch services tailored to your needs.</p>
+            </div>
+            <div class="row">
+                <!-- SEO Optimization -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-globe2 fs-1 text-primary mb-3"></i>
+                            <h5 class="card-title">SEO Optimization</h5>
+                            <p class="card-text">Boost your website's visibility and drive organic traffic with our
+                                expert SEO services.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Web Development -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-code-slash fs-1 text-success mb-3"></i>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Get high-quality, responsive websites designed to engage your audience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Digital Marketing -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-bar-chart-line-fill fs-1 text-warning mb-3"></i>
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">Expand your reach with our comprehensive digital marketing strategies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Social Media Management -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-display-fill fs-1 text-danger mb-3"></i>
+                            <h5 class="card-title">Social Media Management</h5>
+                            <p class="card-text">Increase engagement with our effective social media strategies and
+                                campaigns.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Writing -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-pencil-square fs-1 text-info mb-3"></i>
+                            <h5 class="card-title">Content Writing</h5>
+                            <p class="card-text">High-quality content that resonates with your audience and boosts brand
+                                value.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Affiliate Marketing -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-briefcase-fill fs-1 text-secondary mb-3"></i>
+                            <h5 class="card-title">Affiliate Marketing</h5>
+                            <p class="card-text">Drive sales and generate leads with our proven affiliate marketing
+                                services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Running Testimonial -->
+    <!-- Remove the running testimonial section with David Lee's quote -->
+    
+    </section>
+
+
+
+    <!-- Hire a Freelancer Section -->
+    <section class="hire-freelancer text-center py-5">
+        <div class="container">
+            <!-- Icons Row -->
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <div class="icon-circle bg-primary text-white mx-2">
+                    <i class="fas fa-briefcase fa-2x"></i>
+                </div>
+                <div class="icon-circle bg-success text-white mx-2">
+                    <i class="fas fa-user-tie fa-2x"></i>
+                </div>
+                <div class="icon-circle bg-warning text-white mx-2">
+                    <i class="fas fa-lightbulb fa-2x"></i>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="fw-bold mb-4">Hire a Freelancer</h2>
+
+            <!-- Description -->
+            <p class="text-muted mb-4">
+                Looking for skilled freelancers to bring your projects to life?
+                We have a pool of talented professionals ready to help you succeed.
+            </p>
+
+            <!-- Call to Action Button -->
+            <button class="btn btn-lg btn-primary hire-btn">Hire Now</button>
+        </div>
+    </section>
+
+    <!-- Custom CSS -->
+
+
+
+
+    <!-- Frequently Asked Questions Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <h2 class="fw-bold">Frequently Asked Questions</h2>
+                <p class="text-muted">Got questions? We've got answers! Explore some of the common queries below.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="accordion" id="faqAccordion">
+                       <!-- Question 1 -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseOne" aria-expanded="true"
+            aria-controls="faqCollapseOne">
+            What services do you offer?
+        </button>
+    </h2>
+    <div id="faqCollapseOne" class="accordion-collapse collapse show"
+        aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            We offer a wide range of services, including Internships, Training, and Online Courses to help students and professionals enhance their skills.
+            Additionally, we provide SEO Optimization, Web Development, Digital Marketing, Social Media Management, Content Writing, and Affiliate Marketing services.
+            You can also hire talented freelancers through our platform.
+        </div>
+    </div>
+</div>
+
+<!-- Question 2 -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseTwo" aria-expanded="false"
+            aria-controls="faqCollapseTwo">
+            How can I apply for an internship, training, or course?
+        </button>
+    </h2>
+    <div id="faqCollapseTwo" class="accordion-collapse collapse"
+        aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            You can apply by visiting the Internship section on our platform and selecting the desired internship, training, or course.
+            Simply fill out the application form, submit the required details, and our team will guide you through the next steps.
+        </div>
+    </div>
+</div>
+
+<!-- Question 3 -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseThree" aria-expanded="false"
+            aria-controls="faqCollapseThree">
+            How do I hire a freelancer?
+        </button>
+    </h2>
+    <div id="faqCollapseThree" class="accordion-collapse collapse"
+        aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            Simply click on the "Hire Now" button in the <strong>Hire a Freelancer</strong> section, fill in
+            your project details, and we’ll connect you with the best-suited professionals.
+        </div>
+    </div>
+</div>
+
+<!-- Question 4 -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseFour" aria-expanded="false"
+            aria-controls="faqCollapseFour">
+            Do you offer customized services?
+        </button>
+    </h2>
+    <div id="faqCollapseFour" class="accordion-collapse collapse"
+        aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+            Yes, we provide tailored services to meet your specific needs. Contact us with your
+            requirements, and we'll create a custom package for you.
+        </div>
+    </div>
+</div>
+
+ <!-- Question 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseFour" aria-expanded="false"
+                                    aria-controls="faqCollapseFour">
+                                    What industries do you work with?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We work with a variety of industries, including technology, healthcare, education,
+                                    retail, and more. Our team adapts strategies to suit your industry's unique
+                                    challenges.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseFive" aria-expanded="false"
+                                    aria-controls="faqCollapseFive">
+                                    How can I contact customer support?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can reach us via email, phone, or the contact form on our website. Our support
+                                    team is available 24/7 to assist you with your queries.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Bootstrap JS -->
+    <!-- Request a Call Back Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Request a Call Back</h2>
+                    <p class="text-muted">Need assistance? Fill in your details, and our team will get back to you
+                        shortly!</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-primary"></i> Fast response time</li>
+                        <li class="mb-2"><i class="bi bi-person-check-fill text-primary"></i> Expert guidance</li>
+                        <li><i class="bi bi-chat-dots-fill text-primary"></i> Personalized support</li>
+                    </ul>
+                </div>
+                <!-- Right Form -->
+                <div class="col-md-6">
+                    <div class="card shadow p-4">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label fw-semibold">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-3 col-sm-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+                    data-aos-duration="1200" data-aos-once="false">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a aria-current="page" class="" href="/">
+                                <img src="img/Iroots.png" alt="logo" width="130">
+                            </a>
+                        </div>
+                        <p>Our goal is to empower the next generation of tech leaders.
+                            Our internship program offers hands-on experience in different fields.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8294624055</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>internsroot@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">InternsRoot 2024</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom" href="#">Vivek (Ovi)</a><br><br> -->
+                        Secure your Tommorow , Start Today With <a class="border-bottom" href="">InternsRoot</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!" target="_blank"
+        class="btn btn-lg btn-primary btn-lg-square whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+
+
+    <!-- JavaScript Libraries (ensure Bootstrap 5 JS is loaded last) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

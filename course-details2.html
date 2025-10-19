@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Program</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-ds {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            padding: 80px 20px;
+        }
+        .ds-icon {
+            color: #3498db;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .card-ds {
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s;
+        }
+        .card-ds:hover {
+            transform: translateY(-5px);
+        }
+        .module-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .tool-icon {
+            font-size: 2rem;
+            margin: 10px;
+            color: #2c3e50;
+        }
+        .ds-badge {
+            background: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <!-- <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>InternsRoot</h2> -->
+        <img src="img/irrrr.svg" alt="InternsRoot Logo" height="70">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="services.html" class="nav-item nav-link">Service</a>
+            <a href="internship.html" class="nav-item nav-link">internship</a>
+            <a href="verify.html" class="nav-item nav-link">verify</a>
+            <a href="career.html" class="nav-item nav-link">Career</a>
+            <a href="bloogs.html" class="nav-item nav-link">I Root</a>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="about-us.html" class="dropdown-item">About Us</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <a href="apply.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Aplly Now<i
+                class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+<!-- Hero Section -->
+<section class="hero-ds text-center">
+    <div class="container">
+        <h1 class="display-4 mb-4">
+            <i class="fas fa-microscope ds-icon"></i><br>
+            Data Science Professional Program
+        </h1>
+        <p class="lead mb-4">Master Python, Machine Learning, and Big Data Analytics through real-world projects</p>
+        <a href="#enroll" class="btn btn-light btn-lg px-5">
+            <i class="fas fa-rocket"></i> Enroll Now
+        </a>
+    </div>
+</section>
+
+<div class="container my-5">
+    <!-- Course Overview -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="img/cer.png" alt="Data Science" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2 class="display-6 mb-4">Become a Data Scientist in 6 Months</h2>
+            <div class="d-flex gap-2 mb-3">
+                <span class="badge ds-badge">Python</span>
+                <span class="badge ds-badge">Machine Learning</span>
+                <span class="badge ds-badge">Big Data</span>
+            </div>
+            <p class="lead">Comprehensive program covering statistics, data analysis, machine learning, and deployment</p>
+            <button class="btn btn-primary btn-lg px-4">
+                <i class="fas fa-download"></i> Download Syllabus
+            </button>
+        </div>
+    </div>
+
+    <!-- Program Highlights -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-3">
+            <div class="card card-ds h-100 p-3">
+                <i class="fas fa-chart-line ds-icon"></i>
+                <h4>Real-world Projects</h4>
+                <p>5 industry projects including predictive analytics and NLP</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-ds h-100 p-3">
+                <i class="fas fa-user-graduate ds-icon"></i>
+                <h4>Career Support</h4>
+                <p>Resume building and interview preparation</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-ds h-100 p-3">
+                <i class="fas fa-certificate ds-icon"></i>
+                <h4>Dual Certification</h4>
+                <p>Course completion + Capstone project certificates</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-ds h-100 p-3">
+                <i class="fas fa-laptop-code ds-icon"></i>
+                <h4>Hands-on Labs</h4>
+                <p>Access to cloud labs and Jupyter notebooks</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Curriculum -->
+    <h2 class="text-center mb-4"><i class="fas fa-book-open"></i> Curriculum</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <ul class="module-list list-unstyled">
+                <li>
+                    <i class="fas fa-database me-2"></i>
+                    <strong>Module 1:</strong> Data Wrangling with Python & SQL
+                </li>
+                <li>
+                    <i class="fas fa-chart-bar me-2"></i>
+                    <strong>Module 2:</strong> Exploratory Data Analysis
+                </li>
+                <li>
+                    <i class="fas fa-brain me-2"></i>
+                    <strong>Module 3:</strong> Machine Learning Fundamentals
+                </li>
+                <li>
+                    <i class="fas fa-network-wired me-2"></i>
+                    <strong>Module 4:</strong> Deep Learning & Neural Networks
+                </li>
+                <li>
+                    <i class="fas fa-cloud me-2"></i>
+                    <strong>Module 5:</strong> Big Data with Spark & Hadoop
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4>Program Details</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fas fa-clock text-primary"></i> 
+                        <strong>Duration:</strong> 6 Months
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-certificate text-primary"></i> 
+                        <strong>Projects:</strong> 5+ Projects
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-tools text-primary"></i> 
+                        <strong>Tools:</strong> Python, TensorFlow, Tableau
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools & Technologies -->
+    <h3 class="text-center my-5">Industry-standard Tools</h3>
+    <div class="d-flex flex-wrap justify-content-center mb-5">
+        <i class="fab fa-python tool-icon"></i>
+        <i class="fas fa-database tool-icon"></i>
+        <i class="fab fa-aws tool-icon"></i>
+        <i class="fas fa-chart-area tool-icon"></i>
+        <i class="fab fa-google tool-icon"></i>
+        <i class="fas fa-cloud tool-icon"></i>
+    </div>
+<!-- certificates start -->
+    <div class="container mt-5">
+        <div class="certificate-container p-4">
+            <div class="row">
+                <!-- Certificate 1 -->
+                <div class="col-md-6 text-center">
+                    <h2 class="mb-4"><i class="fas fa-certificate"></i> Course Completion Certificate</h2>
+                    <img src="img/cer.png" alt="Certificate 1" class="img-fluid rounded shadow">
+                </div>
+      
+                <!-- Certificate 2 -->
+                <div class="col-md-6 text-center">
+                    <h2 class="mb-4"><i class="fas fa-certificate"></i> Internship Certificate</h2>
+                    <img src="img/cer.png" alt="Certificate 2" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <!-- certificate end -->
+             <!-- back to home -->
+      
+            <div class="text-center mt-4">
+                <p class="lead"><i class="fas fa-user-graduate"></i> These certificates validate your skills and expertise, helping you stand out in your career.</p>
+            </div>
+      
+            <div class="text-center mt-4">
+                <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+        </div>
+      </div>
+<!-- back to home end -->
+    <!-- FAQ -->
+<h2 class="text-center mb-4"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+<div class="accordion mb-5">
+
+    <!-- Prerequisites -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                <i class="fas fa-laptop me-2"></i> What are the prerequisites?
+            </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+                No prior experience is required! Basic programming knowledge is helpful but not necessary. We start from the fundamentals.
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Duration -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <i class="fas fa-clock me-2"></i> How long is the course?
+            </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                The course lasts **2 to 3 months**, covering both fundamental and advanced concepts.
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <i class="fas fa-certificate me-2"></i> Will I receive a certificate?
+            </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                Yes, you will receive a **Course Completion Certificate** and an **Internship Certificate** upon successfully finishing the program.
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Format -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                <i class="fas fa-desktop me-2"></i> Is this course live or recorded?
+            </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                The course includes **live sessions**, recorded lectures, and assignments to ensure effective learning.
+            </div>
+        </div>
+    </div>
+
+    <!-- Missed Classes -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                <i class="fas fa-calendar-times me-2"></i> What if I miss a class?
+            </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                No worries! You will get access to **recorded sessions**, so you can catch up anytime.
+            </div>
+        </div>
+    </div>
+
+    <!-- Placement Assistance -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                <i class="fas fa-briefcase me-2"></i> Do you provide placement assistance?
+            </button>
+        </h2>
+        <div id="faq6" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                Yes! We offer **career guidance, resume building, mock interviews**, and internship opportunities to help you land a job.
+            </div>
+        </div>
+    </div>
+
+    <!-- Internship -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                <i class="fas fa-user-graduate me-2"></i> Is there an internship included?
+            </button>
+        </h2>
+        <div id="faq7" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                Yes, you will have the opportunity to work on **real-world projects** and earn an **Internship Certificate**.
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Fee -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                <i class="fas fa-wallet me-2"></i> What is the course fee?
+            </button>
+        </h2>
+        <div id="faq8" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                The course fee varies based on the program. Contact us for detailed pricing and available discounts.
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                <i class="fas fa-user-check me-2"></i> How can I enroll?
+            </button>
+        </h2>
+        <div id="faq9" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                Click the **"Enroll Now"** button and complete the registration process. You will receive confirmation via email.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+
+            <div class="col-lg-3 col-sm-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+                data-aos-duration="1200" data-aos-once="false">
+                <div class="single-footer-widget">
+                    <div class="logo">
+                        <a aria-current="page" class="" href="/">
+                            <img src="img/Iroots.png" alt="logo" width="130">
+                        </a>
+                    </div>
+                    <p>Our goal is to empower the next generation of tech leaders.
+                        Our internship program offers hands-on experience in different fields.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Quick Link</h4>
+                <a class="btn btn-link" href="">About Us</a>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Privacy Policy</a>
+                <a class="btn btn-link" href="">Terms & Condition</a>
+                <a class="btn btn-link" href="">FAQs & Help</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Contact</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi India</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8294624055</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>internsroot@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Newsletter</h4>
+                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button"
+                        class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">InternsRoot 2024</a>, All Right Reserved.
+
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    <!-- Designed By <a class="border-bottom" href="#">Vivek (Ovi)</a><br><br> -->
+                    Secure your Tommorow , Start Today With <a class="border-bottom" href="">InternsRoot</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="">Home</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<a href="https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!" target="_blank"
+    class="btn btn-lg btn-primary btn-lg-square whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>InternsRoot</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero-section {
+          background: linear-gradient(to right, #0062cc, #33b5e5);
+          color: white;
+          text-align: center;
+          padding: 60px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        .job-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .campus-ambassador {
+            background-color: #f1f8ff;
+            padding: 50px 20px;
+            border-radius: 8px;
+        }
+
+        .campus-ambassador img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .apply-btn {
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .apply-btn:hover {
+            background-color: #0056b3;
+        }
+
+ 
+        .rating i {
+            font-size: 1.2rem;
+        }
+
+        .running-testimonial {
+            animation: slideIn 10s infinite linear;
+            font-style: italic;
+            color: #555;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <!-- <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>InternsRoot</h2> -->
+            <img src="img/irrrr.svg" alt="InternsRoot Logo" height="70">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="services.html" class="nav-item nav-link">Service</a>
+                <a href="internship.html" class="nav-item nav-link">internship</a>
+                <a href="verify.html" class="nav-item nav-link">verify</a>
+                <a href="career.html" class="nav-item nav-link">Career</a>
+                <a href="bloogs.html" class="nav-item nav-link">I Root</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="about-us.html" class="dropdown-item">About Us</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="apply.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Aplly Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start with suitable background image -->
+<section class="hero-section d-flex align-items-center justify-content-center" style="position: relative; min-height: 350px; text-align: center; background: url('img/Career Guidance homee.jpg') center center/cover no-repeat;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(24, 29, 56, 0.6);"></div>
+  <div class="container position-relative" style="z-index: 2;">
+    <h1 class="display-3 text-white fw-bold mb-3">Join Our Team</h1>
+    <p class="fs-5 text-white mb-4">Explore exciting career opportunities and become a part of our journey to excellence.</p>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Job Openings Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Current Job Openings</h2>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card career-job-card">
+        <div class="card-body">
+          <h5 class="card-title">Frontend Developer</h5>
+          <p class="card-text">We are looking for a creative Frontend Developer proficient in HTML, CSS, and JavaScript.</p>
+          <ul>
+            <li>Location: Remote</li>
+            <li>Experience: 1+ Years</li>
+            <li>Type: Full-time</li>
+          </ul>
+          <a href="apply.html" class="btn btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card career-job-card">
+        <div class="card-body">
+          <h5 class="card-title">Backend Developer</h5>
+          <p class="card-text">Seeking a skilled Backend Developer experienced in Node.js, PHP, and database management.</p>
+          <ul>
+            <li>Location: Remote</li>
+            <li>Experience: 2+ Years</li>
+            <li>Type: Contract</li>
+          </ul>
+          <a href="apply.html" class="btn btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card career-job-card">
+        <div class="card-body">
+          <h5 class="card-title">Digital Marketing Executive</h5>
+          <p class="card-text">Join us as a Digital Marketing Executive to create innovative campaigns.</p>
+          <ul>
+            <li>Location: On-Site</li>
+            <li>Experience: 1+ Years</li>
+            <li>Type: Full-time</li>
+          </ul>
+          <a href="apply.html" class="btn btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Start hidden jobs -->
+    <div id="moreJobs" class="collapse">
+      <div class="row g-4 mt-2">
+        <div class="col-md-6 col-lg-4">
+          <div class="card career-job-card">
+            <div class="card-body">
+              <h5 class="card-title">UI/UX Designer</h5>
+              <p class="card-text">We are seeking a talented UI/UX Designer to create amazing user experiences and interfaces.</p>
+              <ul>
+                <li>Location: Remote</li>
+                <li>Experience: 1+ Years</li>
+                <li>Type: Full-time</li>
+              </ul>
+              <a href="apply.html" class="btn btn-primary">Apply Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card career-job-card">
+            <div class="card-body">
+              <h5 class="card-title">Content Writer</h5>
+              <p class="card-text">Looking for a creative Content Writer to produce engaging and original content for our platforms.</p>
+              <ul>
+                <li>Location: Remote</li>
+                <li>Experience: 0-2 Years</li>
+                <li>Type: Part-time</li>
+              </ul>
+              <a href="apply.html" class="btn btn-primary">Apply Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card career-job-card">
+            <div class="card-body">
+              <h5 class="card-title">HR Executive</h5>
+              <p class="card-text">Join our HR team to help manage recruitment, onboarding, and employee engagement.</p>
+              <ul>
+                <li>Location: On-Site</li>
+                <li>Experience: 1+ Years</li>
+                <li>Type: Full-time</li>
+              </ul>
+              <a href="apply.html" class="btn btn-primary">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End hidden jobs -->
+  </div>
+  <div class="text-center mt-3">
+    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#moreJobs" aria-expanded="false" aria-controls="moreJobs" id="browseVacanciesBtn">
+      Browse All Vacancies
+    </button>
+  </div>
+  <script>
+    // Toggle button text for Browse All Vacancies
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('browseVacanciesBtn');
+      var moreJobs = document.getElementById('moreJobs');
+      if(btn && moreJobs) {
+        moreJobs.addEventListener('show.bs.collapse', function () {
+          btn.textContent = 'Show Less';
+        });
+        moreJobs.addEventListener('hide.bs.collapse', function () {
+          btn.textContent = 'Browse All Vacancies';
+        });
+      }
+    });
+  </script>
+</div>
+
+<!-- Why Work With Us (Trending Glassmorphism) -->
+<div class="container whywork-section mb-5">
+  <div class="whywork-badge">Why Join Us?</div>
+  <h2 class="whywork-heading text-center mb-4">Why Work With Us?</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-3">
+      <div class="whywork-card" style="--feature-delay: 0.1s;">
+        <div class="whywork-icon"><i class="bi bi-people-fill"></i></div>
+        <div class="whywork-subtitle">Team Spirit</div>
+        <h5>Collaborative Team</h5>
+        <p>Work with passionate and talented individuals in a collaborative environment.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="whywork-card" style="--feature-delay: 0.3s;">
+        <div class="whywork-icon"><i class="bi bi-laptop"></i></div>
+        <div class="whywork-subtitle">Flexibility</div>
+        <h5>Remote Work</h5>
+        <p>Enjoy the flexibility of working from the comfort of your home.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="whywork-card" style="--feature-delay: 0.5s;">
+        <div class="whywork-icon"><i class="bi bi-arrow-up-right-circle-fill"></i></div>
+        <div class="whywork-subtitle">Growth Mindset</div>
+        <h5>Career Growth</h5>
+        <p>Explore opportunities for continuous learning and professional growth.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="whywork-card" style="--feature-delay: 0.7s;">
+        <div class="whywork-icon"><i class="bi bi-trophy-fill"></i></div>
+        <div class="whywork-subtitle">We Value You</div>
+        <h5>Recognition</h5>
+        <p>Your hard work will never go unnoticed. We value and reward dedication.</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="#" class="whywork-btn">See Life at InternsRoot</a>
+  </div>
+</div>
+
+<!-- Community Callout -->
+<div class="container community-callout mb-5">
+  <h3 class="fw-bold mb-2">Join Our Community</h3>
+  <p class="mb-2">Connect with peers, mentors, and industry experts. Get updates, resources, and support!</p>
+  <a href="https://t.me/+yourcommunitylink" target="_blank" class="btn btn-success"><i class="fab fa-telegram-plane me-2"></i>Join on Telegram</a>
+</div>
+
+<!-- Life at InternsRoot Mini-Gallery -->
+<div class="container life-gallery mb-5">
+  <img src="img/team-1.jpg" alt="Life at InternsRoot 1">
+  <img src="img/Technical Courses homee.jpg" alt="Life at InternsRoot 2">
+  <img src="img/internship home.jpg" alt="Life at InternsRoot 3">
+</div>
+
+<!-- How to Apply Steps (Creative Modern, 5 Steps) -->
+<div class="container apply-steps-section mb-5">
+  <h2 class="text-center mb-4">How to Apply</h2>
+  <div class="apply-step-row">
+    <div class="apply-step-card" style="--step-delay: 0.1s;">
+      <span class="apply-step-number">1</span>
+      <span class="apply-step-icon"><i class="fas fa-file-alt"></i></span>
+      <div class="apply-step-title">Submit Application</div>
+      <div class="apply-step-desc">Fill out our online application form with your details and resume.</div>
+    </div>
+    <div class="apply-step-connector d-none d-lg-block" style="left: 20%; width: 16%;">
+      <span class="arrow"></span>
+    </div>
+    <div class="apply-step-card" style="--step-delay: 0.2s;">
+      <span class="apply-step-number">2</span>
+      <span class="apply-step-icon"><i class="fas fa-search"></i></span>
+      <div class="apply-step-title">Screening</div>
+      <div class="apply-step-desc">Our team will review your application and resume for the best fit.</div>
+    </div>
+    <div class="apply-step-connector d-none d-lg-block" style="left: 36%; width: 16%;">
+      <span class="arrow"></span>
+    </div>
+    <div class="apply-step-card" style="--step-delay: 0.3s;">
+      <span class="apply-step-number">3</span>
+      <span class="apply-step-icon"><i class="fas fa-comments"></i></span>
+      <div class="apply-step-title">Interview</div>
+      <div class="apply-step-desc">Shortlisted candidates will be invited for an interview with our team.</div>
+    </div>
+    <div class="apply-step-connector d-none d-lg-block" style="left: 52%; width: 16%;">
+      <span class="arrow"></span>
+    </div>
+    <div class="apply-step-card" style="--step-delay: 0.4s;">
+      <span class="apply-step-number">4</span>
+      <span class="apply-step-icon"><i class="fas fa-envelope-open-text"></i></span>
+      <div class="apply-step-title">Offer & Onboarding</div>
+      <div class="apply-step-desc">Receive your offer letter and complete onboarding to officially join us!</div>
+    </div>
+    <div class="apply-step-connector d-none d-lg-block" style="left: 68%; width: 16%;">
+      <span class="arrow"></span>
+    </div>
+    <div class="apply-step-card" style="--step-delay: 0.5s;">
+      <span class="apply-step-number">5</span>
+      <span class="apply-step-icon"><i class="fas fa-handshake"></i></span>
+      <div class="apply-step-title">Get Started</div>
+      <div class="apply-step-desc">If selected, join our team and start your career journey with us!</div>
+    </div>
+  </div>
+</div>
+
+<!-- Trust Badges Section -->
+<div class="container mb-4">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <img src="img/isoLogo.png" alt="ISO Certified" height="40" class="mx-2" title="ISO Certified">
+      <img src="img/aicte.png" alt="AICTE Approved" height="40" class="mx-2" title="AICTE Approved">
+      <img src="img/msmeLogo.png" alt="MSME Registered" height="40" class="mx-2" title="MSME Registered">
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp Apply Button -->
+<div class="container mb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-end">
+      <a href="https://wa.me/918294624055?text=Hello%20InternsRoot%2C%20I%20want%20to%20apply%20for%20a%20job!" target="_blank" class="btn btn-success btn-lg mb-2">
+        <i class="fab fa-whatsapp me-2"></i>Apply via WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Campus Ambassador Section Modern Card -->
+<div class="container mb-5">
+  <div class="career-ambassador-card">
+    <img src="img/CA.jpg" alt="Campus Ambassador Program">
+    <div>
+      <h2 class="fw-bold mb-2">Become a Campus Ambassador</h2>
+      <p>Are you passionate about leadership and communication? Join us as a Campus Ambassador and represent our brand at your university!</p>
+      <ul>
+        <li>Gain hands-on experience in marketing and event planning</li>
+        <li>Earn certificates and exclusive perks</li>
+        <li>Work closely with industry experts</li>
+      </ul>
+      <a href="apply.html" class="btn">Apply for Campus Ambassador</a>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonial Section Modernized -->
+<div class="container testimonial-section mb-5">
+  <h2 class="text-center fw-bold mb-4">Hear from Our Ambassadors</h2>
+  <div id="careerTestimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="text-center">
+          <div class="testimonial-quote-icon mb-2"><i class="fas fa-quote-left"></i></div>
+          <img src="img/CA.jpg" alt="Ambassador 1" class="testimonial-img-glow">
+          <div class="fw-bold mt-2">John Doe</div>
+          <div class="testimonial-role">Campus Ambassador, IIT Delhi</div>
+          <div class="testimonial-text">"Being a part of this community has helped me grow professionally. Their services are top-notch and really help me in achieving my goals!"</div>
+          <div class="text-warning small mb-2">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="text-center">
+          <div class="testimonial-quote-icon mb-2"><i class="fas fa-quote-left"></i></div>
+          <img src="img/CA.jpg" alt="Ambassador 2" class="testimonial-img-glow">
+          <div class="fw-bold mt-2">Jane Smith</div>
+          <div class="testimonial-role">Campus Ambassador, NIT Trichy</div>
+          <div class="testimonial-text">"Their approach is innovative and results-driven. The support I've received from the team has been invaluable in my career growth!"</div>
+          <div class="text-warning small mb-2">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="text-center">
+          <div class="testimonial-quote-icon mb-2"><i class="fas fa-quote-left"></i></div>
+          <img src="img/CA.jpg" alt="Ambassador 3" class="testimonial-img-glow">
+          <div class="fw-bold mt-2">Michael Brown</div>
+          <div class="testimonial-role">Campus Ambassador, VIT</div>
+          <div class="testimonial-text">"I recommend their services to anyone looking for expert advice and guidance. The results speak for themselves!"</div>
+          <div class="text-warning small mb-2">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="text-center">
+          <div class="testimonial-quote-icon mb-2"><i class="fas fa-quote-left"></i></div>
+          <img src="img/CA.jpg" alt="Ambassador 4" class="testimonial-img-glow">
+          <div class="fw-bold mt-2">Emily Davis</div>
+          <div class="testimonial-role">Campus Ambassador, JNU</div>
+          <div class="testimonial-text">"The team’s professionalism and expertise have helped me develop both personally and professionally. I’m proud to be associated with them!"</div>
+          <div class="text-warning small mb-2">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#careerTestimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#careerTestimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div class="testimonial-dots mt-3">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</div>
+
+    
+
+<!-- FAQ Section Start -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+          Q: Who can apply?
+        </button>
+      </h2>
+      <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Anyone who meets the eligibility criteria mentioned in the job/internship description can apply. We welcome students, recent graduates, and professionals looking for new opportunities.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+          Q: Will I get a certificate?
+        </button>
+      </h2>
+      <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, all interns and course participants who successfully complete their program will receive a certificate from InternsRoot.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+          Q: Is the internship paid?
+        </button>
+      </h2>
+      <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Some internships are paid while others may offer stipends or be unpaid, depending on the role and company. Please check the specific job/internship description for details.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+          Q: Can I apply for multiple roles?
+        </button>
+      </h2>
+      <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, you are welcome to apply for multiple roles if you meet the eligibility criteria for each position.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FAQ Section End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-3 col-sm-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+                    data-aos-duration="1200" data-aos-once="false">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a aria-current="page" class="" href="/">
+                                <img src="img/Iroots.png" alt="logo" width="130">
+                            </a>
+                        </div>
+                        <p>Our goal is to empower the next generation of tech leaders.
+                            Our internship program offers hands-on experience in different fields.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8294624055</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>internsroot@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">InternsRoot 2024</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom" href="#">Vivek (Ovi)</a><br><br> -->
+                        Secure your Tommorow , Start Today With <a class="border-bottom" href="">InternsRoot</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!" target="_blank"
+        class="btn btn-lg btn-primary btn-lg-square whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+// Testimonial dots navigation (sync with carousel)
+const dots = document.querySelectorAll('.testimonial-dots .dot');
+const carousel = document.getElementById('careerTestimonialCarousel');
+if (carousel && dots.length) {
+  carousel.addEventListener('slid.bs.carousel', function (e) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[e.to].classList.add('active');
+  });
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      const bsCarousel = bootstrap.Carousel.getInstance(carousel);
+      bsCarousel.to(idx);
+    });
+  });
+}
+</script>
+</body>
+
+</html>

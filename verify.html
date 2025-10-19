@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>InternsRoot</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .verification-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 40px;
+        }
+
+        .verification-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .verification-header h1 {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .verification-header p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #3498db;
+        }
+
+        .verify-btn {
+            display: block;
+            width: 100%;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .verify-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .result-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .result-container .success {
+            color: #27ae60;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .result-container .error {
+            color: #e74c3c;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .certificate-details {
+            margin-top: 20px;
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+        }
+
+        .certificate-details p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .certificate-details span {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+
+        /* nnnnnnnnnnnnnnnnnnnnnnnnnnn */
+
+        .feature-box {
+            border-radius: 15px;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .purple-bg {
+            background-color: #C389F3;
+        }
+
+        .blue-bg {
+            background-color: #62C2FF;
+        }
+
+        .orange-bg {
+            background-color: #FFA850;
+        }
+
+        .green-bg {
+            background-color: #65F788;
+        }
+
+        .feature-box i {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .callback-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .callback-form h3 {
+            margin-bottom: 20px;
+        }
+
+        .callback-form input {
+            margin-bottom: 10px;
+        }
+
+        .form-control-icon {
+            position: relative;
+        }
+
+        .form-control-icon i {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #888;
+        }
+
+        .form-control-icon input {
+            padding-left: 35px;
+        }
+
+
+
+
+        .certificate-section {
+            margin-top: 50px;
+        }
+
+        .certificate-image {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .certificate-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .certificate-description {
+            font-size: 18px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Colorful icons */
+        .certificate-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .purple-icon {
+            color: #C389F3;
+        }
+
+        .blue-icon {
+            color: #62C2FF;
+        }
+
+        .orange-icon {
+            color: #FFA850;
+        }
+
+        .green-icon {
+            color: #65F788;
+        }
+
+        /* fghjk */
+        /* Custom Styling */
+        .feature-box {
+            border-radius: 15px;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .purple-bg {
+            background-color: #C389F3;
+        }
+
+        .blue-bg {
+            background-color: #62C2FF;
+        }
+
+        .orange-bg {
+            background-color: #FFA850;
+        }
+
+        .green-bg {
+            background-color: #65F788;
+        }
+
+        .feature-box i {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Custom form styling */
+        .callback-form {
+            background-color: #f7f7f7;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control-icon i {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            font-size: 20px;
+        }
+
+        .form-control-icon input {
+            padding-left: 35px;
+        }
+
+        /* fghjkl */
+        /* Styling the Graph */
+        .graph-container {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .graph {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            flex-wrap: nowrap;
+            /* Ensure all steps stay in one line */
+        }
+
+        .graph-step {
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+            flex: 1;
+            /* Make each step take equal space */
+        }
+
+        .step-circle {
+            background: #fff;
+            border: 3px solid #3498db;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            font-size: 28px;
+            color: #3498db;
+        }
+
+        .step-circle:hover {
+            background-color: #3498db;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .step-1 i {
+            color: #e74c3c;
+        }
+
+        .step-2 i {
+            color: #f39c12;
+        }
+
+        .step-3 i {
+            color: #2ecc71;
+        }
+
+        .step-4 i {
+            color: #9b59b6;
+        }
+
+        .step-label {
+            margin-top: 10px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .graph-arrow {
+            font-size: 24px;
+            color: #3498db;
+            margin: 0 10px;
+        }
+
+        .graph-arrow i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 768px) {
+            .graph {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .graph-step {
+                flex: none;
+                /* Remove flex-grow for stacking */
+                margin: 10px 0;
+            }
+
+            .step-circle {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .step-label {
+                font-size: 12px;
+            }
+
+            .graph-arrow {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <!-- <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>InternsRoot</h2> -->
+            <img src="img/irrrr.svg" alt="InternsRoot Logo" height="70">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="services.html" class="nav-item nav-link">Service</a>
+                <a href="internship.html" class="nav-item nav-link">internship</a>
+                <a href="verify.html" class="nav-item nav-link">verify</a>
+                <a href="career.html" class="nav-item nav-link">Career</a>
+                <a href="bloogs.html" class="nav-item nav-link">I Root</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="about-us.html" class="dropdown-item">About Us</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="apply.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Aplly Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="verify-hero-section mb-5">
+        <div class="verify-hero-icon"><i class="fas fa-shield-alt"></i></div>
+        <h1>Certificate Verification</h1>
+        <p>Instantly verify the authenticity of your InternsRoot certificate below.</p>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="verify-trust-badges mb-4">
+        <img src="img/isoLogo.png" alt="ISO Certified" title="ISO Certified">
+        <img src="img/aicte.png" alt="AICTE Approved" title="AICTE Approved">
+        <img src="img/msmeLogo.png" alt="MSME Registered" title="MSME Registered">
+    </div>
+
+    <!-- Verification Form Card -->
+    <div class="verify-form-card">
+        <div class="mb-4 text-center">
+            <i class="fas fa-certificate fa-2x text-primary mb-2"></i>
+            <div class="fw-bold mb-1">Enter Certificate ID</div>
+            <div class="text-muted small">(e.g. IRC12211)</div>
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" id="certificate-id" class="form-control" placeholder="Enter Certificate ID">
+        </div>
+        <button class="verify-form-btn w-100" onclick="verifyCertificate()">Verify Certificate</button>
+        <div id="result" class="text-center mt-3"></div>
+        <div id="certificate-details" class="certificate-details mt-3" style="display: none;"></div>
+    </div>
+
+    <!-- How Verification Works Steps -->
+    <div class="container verify-steps-section mb-5">
+        <h2 class="text-center mb-4">How Verification Works</h2>
+        <div class="verify-step-row">
+            <div class="verify-step-card" style="--step-delay: 0.1s;">
+                <span class="verify-step-number">1</span>
+                <span class="verify-step-icon"><i class="fas fa-file-alt"></i></span>
+                <div class="verify-step-title">Enter Certificate ID</div>
+                <div class="verify-step-desc">Type your unique certificate ID in the box above.</div>
+            </div>
+            <div class="verify-step-connector d-none d-lg-block" style="left: 20%; width: 16%;">
+                <span class="arrow"></span>
+            </div>
+            <div class="verify-step-card" style="--step-delay: 0.2s;">
+                <span class="verify-step-number">2</span>
+                <span class="verify-step-icon"><i class="fas fa-search"></i></span>
+                <div class="verify-step-title">System Checks</div>
+                <div class="verify-step-desc">Our system instantly checks the authenticity of your certificate.</div>
+            </div>
+            <div class="verify-step-connector d-none d-lg-block" style="left: 36%; width: 16%;">
+                <span class="arrow"></span>
+            </div>
+            <div class="verify-step-card" style="--step-delay: 0.3s;">
+                <span class="verify-step-number">3</span>
+                <span class="verify-step-icon"><i class="fas fa-check-circle"></i></span>
+                <div class="verify-step-title">Get Result</div>
+                <div class="verify-step-desc">See instant verification result and certificate details below.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Sample Modernized -->
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="verify-certificate-card mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <img src="img/cer.png" alt="Certificate Sample" class="certificate-image" style="max-width: 220px;">
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="certificate-title mb-2">Certificate Sample</h2>
+                            <p class="certificate-description mb-2">
+                                Here’s a sample of the certificate you will receive upon successful completion of the course. This certificate is awarded to individuals who complete all necessary requirements and demonstrate their understanding and skills.
+                            </p>
+                            <div class="row text-center mb-2">
+                                <div class="col-6 col-md-3">
+                                    <i class="fas fa-certificate certificate-icon purple-icon"></i>
+                                    <div class="small">Certificate of Completion</div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <i class="fas fa-video certificate-icon blue-icon"></i>
+                                    <div class="small">25+ Hours Video</div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <i class="fas fa-project-diagram certificate-icon orange-icon"></i>
+                                    <div class="small">Live Projects</div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <i class="fas fa-tools certificate-icon green-icon"></i>
+                                    <div class="small">Top Tools</div>
+                                </div>
+                            </div>
+                            <a href="img/cer.png" download class="download-btn mt-2">
+                                <i class="fas fa-download"></i> Download Sample
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini Gallery -->
+    <div class="container verify-gallery mb-5">
+        <img src="img/team-1.jpg" alt="Life at InternsRoot 1">
+        <img src="img/Technical Courses homee.jpg" alt="Life at InternsRoot 2">
+        <img src="img/internship home.jpg" alt="Life at InternsRoot 3">
+    </div>
+
+    <script>
+        function verifyCertificate() {
+            const certificateId = document.getElementById('certificate-id').value.trim();
+            const resultContainer = document.getElementById('result');
+            const certificateDetails = document.getElementById('certificate-details');
+
+            resultContainer.innerHTML = '';
+            certificateDetails.style.display = 'none';
+
+            if (certificateId === '') {
+                resultContainer.innerHTML = '<span class="verify-result-error">Please enter a valid Certificate ID.</span>';
+                return;
+            }
+
+            // Simulated verification (Replace this with your backend verification logic)
+            if (certificateId === 'ABC12345' || certificateId === 'IRC12211') {
+                resultContainer.innerHTML = '<span class="verify-result-success">Certificate Verified Successfully!</span>';
+                certificateDetails.innerHTML = `
+                    <p><span>Certificate ID:</span> IRC12211</p>
+                    <p><span>Name:</span> John Doe</p>
+                    <p><span>Course:</span> Advanced Web Development</p>
+                    <p><span>Completion Date:</span> December 10, 2024</p>
+                    <p><span>Issued By:</span> Student's Choice Consultancy</p>
+                `;
+                certificateDetails.style.display = 'block';
+            } else {
+                resultContainer.innerHTML = '<span class="verify-result-error">Certificate not found. Please check the ID and try again.</span>';
+            }
+        }
+    </script>
+
+    <!-- Callback Section -->
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Request a Callback</h2>
+            <p class="text-muted mb-4">
+                Request a callback now! Fill in your details and one of our academic counselors will contact you
+                promptly.
+            </p>
+
+            <!-- Callback Form Section -->
+            <sec class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="callback-form">
+                        <h3>Enter Your Details</h3>
+                        <form action="#" method="POST">
+                            <!-- Name Field -->
+                            <div class="mb-3 form-control-icon">
+                                <i class="fas fa-user"></i>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    required>
+                            </div>
+                            <!-- Phone Number Field -->
+                            <div class="mb-3 form-control-icon">
+                                <i class="fas fa-phone-alt"></i>
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Request a Callback</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Side - Interactive Knowledge Graph -->
+                <div class="col-md-6">
+                    <div class="graph-container">
+                        <h3 class="fw-bold text-center mb-4">Your Journey with InternsRoot</h3>
+                        <div class="graph">
+                            <div class="graph-step">
+                                <div class="step-circle step-1">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <p class="step-label">Skill Development</p>
+                            </div>
+                            <div class="graph-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="graph-step">
+                                <div class="step-circle step-2">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <p class="step-label">Live Projects</p>
+                            </div>
+                            <div class="graph-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="graph-step">
+                                <div class="step-circle step-3">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <p class="step-label">Certification</p>
+                            </div>
+                            <div class="graph-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="graph-step">
+                                <div class="step-circle step-4">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <p class="step-label">Internship Placement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-3 col-sm-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+                    data-aos-duration="1200" data-aos-once="false">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a aria-current="page" class="" href="/">
+                                <img src="img/Iroots.png" alt="logo" width="130">
+                            </a>
+                        </div>
+                        <p>Our goal is to empower the next generation of tech leaders.
+                            Our internship program offers hands-on experience in different fields.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8294624055</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>internsroot@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">InternsRoot 2024</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom" href="#">Ovi</a><br><br> -->
+                        Secure your Tommorow , Start Today With <a class="border-bottom" href="">InternsRoot</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!" target="_blank"
+        class="btn btn-lg btn-primary btn-lg-square whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

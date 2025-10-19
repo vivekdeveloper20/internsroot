@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us | InternsRoot</title>
+    <meta name="description" content="Meet the InternsRoot team and discover our vision for bridging education and real-world experience.">
+    <meta name="keywords" content="About Us, InternsRoot Team, Vision, Education, Internship, Career">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+
+        #about-us {
+            background: linear-gradient(to right, #0062cc, #33b5e5);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+
+        }
+
+        #values i {
+            font-size: 4rem;
+            /* Increased icon size */
+            margin-bottom: 1rem;
+            transition: color 0.3s, transform 0.3s ease;
+            display: block;
+            text-align: center;
+            padding: 20px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            /* Light background for icons */
+        }
+
+        /* Color adjustments for individual values */
+        #values i:nth-child(1) {
+            color: #007bff;
+            /* Blue for Integrity */
+            background-color: #e3f2fd;
+            /* Light blue background */
+        }
+
+        #values i:nth-child(2) {
+            color: #ff9800;
+            /* Orange for Innovation */
+            background-color: #ffeb3b;
+            /* Light yellow background */
+        }
+
+        #values i:nth-child(3) {
+            color: #4caf50;
+            /* Green for Excellence */
+            background-color: #c8e6c9;
+            /* Light green background */
+        }
+
+        #values i:hover {
+            color: #fff;
+            /* White color on hover */
+            transform: translateY(-10px);
+            /* Hover effect */
+        }
+
+        #team img {
+            max-width: 150px;
+            border: 3px solid #007bff;
+            /* Blue border for team images */
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        #team img:hover {
+            transform: translateY(-10px);
+            border-color: #0056b3;
+            /* Darker blue border on hover */
+        }
+
+        #team .social-icons i {
+            font-size: 2rem;
+            margin: 0 15px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        /* Colorful social media icons */
+        #team .social-icons a {
+            color: #3b5998;
+            /* Facebook blue */
+        }
+
+        #team .social-icons a:hover {
+            color: #4267b2;
+            /* Darker Facebook blue */
+        }
+
+        #team .social-icons .fab.fa-twitter {
+            color: #1da1f2;
+            /* Twitter blue */
+        }
+
+        #team .social-icons .fab.fa-twitter:hover {
+            color: #0e76a8;
+            /* Darker Twitter blue */
+        }
+
+        #team .social-icons .fab.fa-linkedin {
+            color: #0077b5;
+            /* LinkedIn blue */
+        }
+
+        #team .social-icons .fab.fa-linkedin:hover {
+            color: #004182;
+            /* Darker LinkedIn blue */
+        }
+
+        #team .social-icons .fab.fa-instagram {
+            color: #e4405f;
+            /* Instagram pinkish-red */
+        }
+
+        #team .social-icons .fab.fa-instagram:hover {
+            color: #c13584;
+            /* Darker Instagram color */
+        }
+
+        #team .social-icons .fab.fa-youtube {
+            color: #ff0000;
+            /* YouTube red */
+        }
+
+        #team .social-icons .fab.fa-youtube:hover {
+            color: #cc0000;
+            /* Darker YouTube red */
+        }
+
+        #call-to-action {
+            background-color: #f8f9fa;
+            /* Light background color for call to action */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #values i {
+                font-size: 2.5rem;
+                /* Adjust icon size for smaller screens */
+                padding: 15px;
+            }
+
+            #team img {
+                max-width: 120px;
+                /* Smaller team images on mobile */
+            }
+
+            #team .social-icons i {
+                font-size: 1.8rem;
+                /* Smaller social icons on mobile */
+            }
+
+            #team .social-icons {
+                text-align: center;
+                /* Center social icons on mobile */
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Additional styling for team section */
+        #team .social-icons a {
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #e7e7e7;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        #team .social-icons a:hover {
+            background-color: #ddd;
+        }
+
+        /* Timeline Centered Vertical Line Styles */
+        .timeline-center {
+            position: relative;
+            padding: 40px 0;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #e0e0e0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 1.2rem;
+        }
+        .timeline-content {
+            min-width: 220px;
+            max-width: 320px;
+        }
+        @media (max-width: 767px) {
+            .timeline-center {
+                padding: 20px 0;
+            }
+            .timeline-content {
+                min-width: 0;
+                max-width: 100%;
+            }
+            .timeline-dot {
+                margin: 0 auto 20px auto;
+            }
+            .timeline-line {
+                left: 20px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <!-- <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>InternsRoot</h2> -->
+            <img src="img/irrrr.svg" alt="InternsRoot Logo" height="70">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="services.html" class="nav-item nav-link">Service</a>
+                <a href="internship.html" class="nav-item nav-link">internship</a>
+                <a href="verify.html" class="nav-item nav-link">verify</a>
+                <a href="career.html" class="nav-item nav-link">Career</a>
+                <a href="bloogs.html" class="nav-item nav-link">I Root</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="about-us.html" class="dropdown-item">About Us</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="life-at-internsroot.html" class="dropdown-item">Life at InternsRoot</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="apply.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Aplly Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start with logo-inspired blue gradient -->
+<section class="hero-section d-flex align-items-center justify-content-center" style="position: relative; min-height: 350px; text-align: center; background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #42a5f5 100%);">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(24, 29, 56, 0.5);"></div>
+  <div class="container position-relative" style="z-index: 2;">
+    <h1 class="display-3 text-white fw-bold mb-3">About Us</h1>
+    <p class="fs-5 text-white mb-4">Welcome to InternsRoot, where we strive to make a positive impact through innovation, collaboration, and dedication. Our goal is to create opportunities and empower individuals to achieve their full potential.</p>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+    <div class="container py-5">
+        <!-- Mission & Vision Section (Modern, Glassmorphism, Animated) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <section id="mission-vision" class="mb-5">
+            <!-- Mission Block -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
+                        <h2 class="fw-bold mb-3" style="color:#3b82f6;"><i class="fas fa-bullseye me-2"></i>Our Mission</h2>
+                        <div class="animated-desc mb-2" style="font-size:1.2rem;">
+                            <span class="typewrite" data-period="2000" data-type='["Empowering students through real-world learning.", "Building skills for tomorrow.", "Unlocking potential with hands-on internships."]'></span>
+                        </div>
+                        <p class="text-muted">We strive to bridge the gap between education and industry by providing students with practical experience, mentorship, and opportunities to grow.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <div class="glass-card p-3 d-inline-block">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Students working" class="img-fluid rounded-4 shadow" style="max-height:320px;object-fit:cover;">
+                    </div>
+                </div>
+            </div>
+            <!-- Vision Block -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="glass-card p-3 d-inline-block">
+                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80" alt="Mentorship and growth" class="img-fluid rounded-4 shadow" style="max-height:320px;object-fit:cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
+                        <h2 class="fw-bold mb-3" style="color:#3b82f6;"><i class="fas fa-eye me-2"></i>Our Vision</h2>
+                        <ul class="list-unstyled ms-2">
+                            <li class="mb-2"><i class="fas fa-link text-primary me-2"></i>Connecting education to industry</li>
+                            <li class="mb-2"><i class="fas fa-globe text-info me-2"></i>Accessible, flexible learning for all</li>
+                            <li class="mb-2"><i class="fas fa-briefcase text-success me-2"></i>Career readiness & real opportunities</li>
+                            <li class="mb-2"><i class="fas fa-users text-primary me-2"></i>Fostering a collaborative, innovative community</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init({ once: true, duration: 900 });
+          // Typewriter effect for animated description
+          var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+          };
+          TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+            if (this.isDeleting) {
+              this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+              this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+            var that = this;
+            var delta = 120 - Math.random() * 60;
+            if (this.isDeleting) { delta /= 2; }
+            if (!this.isDeleting && this.txt === fullTxt) {
+              delta = this.period;
+              this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+              this.isDeleting = false;
+              this.loopNum++;
+              delta = 600;
+            }
+            setTimeout(function() { that.tick(); }, delta);
+          };
+          window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+              var toRotate = elements[i].getAttribute('data-type');
+              var period = elements[i].getAttribute('data-period');
+              if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+              }
+            }
+          };
+        </script>
+        <style>
+        .glass-card {
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(123, 97, 255, 0.18);
+            transition: box-shadow 0.3s;
+        }
+        .glass-card:hover {
+            box-shadow: 0 12px 36px 0 rgba(123, 97, 255, 0.18);
+        }
+        .typewrite > .wrap {
+            border-right: 0.08em solid #3b82f6;
+            color: #222;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        .text-purple { color: #7c3aed; }
+        [data-aos] { opacity: 0; transition-property: opacity, transform; }
+        [data-aos].aos-animate { opacity: 1; }
+        </style>
+
+        <!-- Our Values Section (Modern, Glassmorphism, Animated) -->
+        <section id="values" class="mb-5 py-5" style="background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%); font-family: 'Inter', 'Poppins', Arial, sans-serif;">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5" style="color:#3b82f6;">Our Values</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                        <div class="value-card h-100 p-4 text-center">
+                            <div class="icon mb-3" style="font-size:2.5rem;">💡</div>
+                            <h5 class="fw-semibold mb-2">Continuous Learning</h5>
+                            <p class="mb-0 text-muted">We inspire curiosity and growth through lifelong learning.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="value-card h-100 p-4 text-center">
+                            <div class="icon mb-3" style="font-size:2.5rem;">🤝</div>
+                            <h5 class="fw-semibold mb-2">Collaboration</h5>
+                            <p class="mb-0 text-muted">We believe in teamwork and the power of shared ideas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="value-card h-100 p-4 text-center">
+                            <div class="icon mb-3" style="font-size:2.5rem;">🚀</div>
+                            <h5 class="fw-semibold mb-2">Growth</h5>
+                            <p class="mb-0 text-muted">We empower students to reach new heights in their careers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="value-card h-100 p-4 text-center">
+                            <div class="icon mb-3" style="font-size:2.5rem;">🔐</div>
+                            <h5 class="fw-semibold mb-2">Integrity</h5>
+                            <p class="mb-0 text-muted">We act with honesty, transparency, and respect.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="value-card h-100 p-4 text-center">
+                            <div class="icon mb-3" style="font-size:2.5rem;">🌐</div>
+                            <h5 class="fw-semibold mb-2">Inclusivity</h5>
+                            <p class="mb-0 text-muted">We welcome diverse backgrounds and perspectives.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="value-card h-100 p-4 text-center">
+                            <div class="icon mb-3" style="font-size:2.5rem;">📚</div>
+                            <h5 class="fw-semibold mb-2">Skill Building</h5>
+                            <p class="mb-0 text-muted">We focus on practical skills for real-world success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+        #values {
+            border-radius: 2rem;
+            margin-bottom: 3rem;
+        }
+        .value-card {
+            background: rgba(255,255,255,0.45);
+            box-shadow: 0 4px 24px 0 rgba(123, 97, 255, 0.10);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(123, 97, 255, 0.10);
+            transition: box-shadow 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .value-card:hover {
+            box-shadow: 0 8px 32px 0 #7c3aed33, 0 2px 8px 0 #3b82f633;
+            transform: translateY(-8px) scale(1.03);
+        }
+        .value-card .icon {
+            filter: drop-shadow(0 2px 8px #3b82f622);
+        }
+        @media (max-width: 767px) {
+            #values { border-radius: 1rem; }
+            .value-card { border-radius: 1rem; }
+        }
+        </style>
+
+        <!-- Ecosystem Partners Section (with horizontal scrolling carousel) -->
+        <section id="ecosystem-partners" class="mb-5 py-5" style="background: linear-gradient(120deg, #fff 0%, #f8fafc 100%); border-radius: 2rem; border: 1.5px solid #e0e7ff; font-family: 'Inter', 'Poppins', Arial, sans-serif;">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-2" style="color:#3b82f6; font-size:2rem;">🤝 Our Ecosystem Partners</h2>
+                <p class="text-center mb-5 text-muted" style="max-width: 500px; margin: 0 auto; font-size:1.1rem;">We proudly align with India’s innovation and skilling missions.</p>
+                <div class="ecosystem-carousel-wrap position-relative">
+                    <div class="ecosystem-carousel d-flex align-items-center">
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/msmeLogo.png" alt="MSME" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/Digital-India.png" alt="Digital India" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/isoLogo.png" alt="ISO" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/aicte.png" alt="AICTE" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/StartupIndia.png" alt="Startup India" class="img-fluid eco-logo">
+                        </div>
+                        <!-- Duplicate logos for infinite scroll effect -->
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/msmeLogo.png" alt="MSME" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/Digital-India.png" alt="Digital India" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/isoLogo.png" alt="ISO" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/aicte.png" alt="AICTE" class="img-fluid eco-logo">
+                        </div>
+                        <div class="eco-logo-card p-3 mx-3">
+                            <img src="img/StartupIndia.png" alt="Startup India" class="img-fluid eco-logo">
+                        </div>
+                    </div>
+                    <div class="eco-gradient eco-gradient-left"></div>
+                    <div class="eco-gradient eco-gradient-right"></div>
+                </div>
+            </div>
+        </section>
+        <style>
+        #ecosystem-partners {
+            box-shadow: 0 4px 24px 0 rgba(123, 97, 255, 0.07);
+        }
+        .ecosystem-carousel-wrap {
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+        .ecosystem-carousel {
+            display: flex;
+            align-items: center;
+            animation: eco-marquee 22s linear infinite;
+            will-change: transform;
+        }
+        @keyframes eco-marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .eco-logo-card {
+            background: #fff;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 12px 0 #e0e7ff88;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+            min-width: 120px;
+            min-height: 90px;
+        }
+        .eco-logo-card:hover {
+            box-shadow: 0 8px 32px 0 #3b82f633, 0 2px 8px 0 #7c3aed33;
+            transform: translateY(-6px) scale(1.06);
+        }
+        .eco-logo {
+            max-height: 48px;
+            max-width: 100%;
+            object-fit: contain;
+            transition: filter 0.2s, transform 0.2s;
+            filter: drop-shadow(0 2px 8px #3b82f622);
+        }
+        .eco-logo-card:hover .eco-logo {
+            filter: none;
+            transform: scale(1.08);
+        }
+        .eco-gradient {
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 60px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .eco-gradient-left {
+            left: 0;
+            background: linear-gradient(90deg, #fff 70%, rgba(255,255,255,0) 100%);
+        }
+        .eco-gradient-right {
+            right: 0;
+            background: linear-gradient(270deg, #fff 70%, rgba(255,255,255,0) 100%);
+        }
+        @media (max-width: 991px) {
+            .ecosystem-carousel-wrap { max-width: 100vw; }
+        }
+        @media (max-width: 767px) {
+            .ecosystem-carousel {
+                animation: none;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .eco-logo-card { min-width: 44vw; min-height: 70px; margin: 0.5rem; }
+            .eco-logo { max-height: 36px; }
+            .eco-gradient { display: none; }
+        }
+        </style>
+
+            <!-- Team Section -->
+            <section id="team" class="text-center mb-5">
+                <h2 class="mb-4">Meet Our Team</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/pro1.svg" alt="Team Member" class="rounded-circle mb-3">
+                        <h5>Vivek K</h5>
+                        <p>Founder & CEO</p>
+                        <div class="social-icons">
+                            <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/pro1.svg" alt="Team Member" class="rounded-circle mb-3">
+                        <h5>Mazharul Haque</h5>
+                        <p>CTO</p>
+                        <div class="social-icons">
+                            <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/pro1.svg" alt="Team Member" class="rounded-circle mb-3">
+                        <h5>Alok Kumar</h5>
+                        <p>M D</p>
+                        <div class="social-icons">
+                            <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Our Journey Section (Extra Attractive, Animated, Modern, Centered Content) -->
+        <section id="journey" class="mb-5 py-5 position-relative" style="background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%); font-family: 'Inter', 'Poppins', Arial, sans-serif; overflow: hidden;">
+            <svg class="journey-bg-pattern" width="100%" height="180" viewBox="0 0 1440 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;z-index:0;opacity:0.12;">
+                <path fill="#7c3aed" fill-opacity="0.18" d="M0,96L48,101.3C96,107,192,117,288,117.3C384,117,480,107,576,117.3C672,128,768,160,864,154.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+            <div class="container position-relative" style="z-index:1;">
+                <h2 class="text-center fw-bold mb-5" style="color:#3b82f6; letter-spacing:0.02em; font-size:2.5rem;">Our Journey</h2>
+                <div class="journey-timeline position-relative mx-auto" style="max-width: 900px;">
+                    <div class="journey-line journey-line-animated"></div>
+                    <!-- Milestone 1 -->
+                    <div class="row journey-row mb-5 align-items-center">
+                        <div class="col-md-6 d-flex justify-content-md-end justify-content-center">
+                            <div class="journey-card glass-card text-center" data-aos="fade-right">
+                                <div class="journey-icon-float bounceIn"><span>🚩</span></div>
+                                <div class="journey-badge journey-badge-3d bg-gradient-blue mb-2 mx-auto"><span>2021</span></div>
+                                <h5 class="fw-bold mb-1 journey-title">Founded</h5>
+                                <p class="mb-0 text-muted">InternsRoot was established with a vision to connect education with real-world opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 position-relative d-flex justify-content-md-start justify-content-center">
+                            <span class="journey-dot journey-dot-animated bg-gradient-blue-glow" data-aos="zoom-in"></span>
+                        </div>
+                    </div>
+                    <!-- Milestone 2 -->
+                    <div class="row journey-row mb-5 align-items-center flex-md-row-reverse">
+                        <div class="col-md-6 d-flex justify-content-md-start justify-content-center">
+                            <div class="journey-card glass-card text-center" data-aos="fade-left">
+                                <div class="journey-icon-float bounceIn"><span>👩‍💻</span></div>
+                                <div class="journey-badge journey-badge-3d bg-gradient-purple mb-2 mx-auto"><span>2022</span></div>
+                                <h5 class="fw-bold mb-1 journey-title">1000+ Interns Empowered</h5>
+                                <p class="mb-0 text-muted">We reached a milestone of empowering over 1000 interns across various domains.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 position-relative d-flex justify-content-md-end justify-content-center">
+                            <span class="journey-dot journey-dot-animated bg-gradient-purple-glow" data-aos="zoom-in"></span>
+                        </div>
+                    </div>
+                    <!-- Milestone 3 -->
+                    <div class="row journey-row mb-5 align-items-center">
+                        <div class="col-md-6 d-flex justify-content-md-end justify-content-center">
+                            <div class="journey-card glass-card text-center" data-aos="fade-right">
+                                <div class="journey-icon-float bounceIn"><span>🌍</span></div>
+                                <div class="journey-badge journey-badge-3d bg-gradient-blue mb-2 mx-auto"><span>2023</span></div>
+                                <h5 class="fw-bold mb-1 journey-title">Global Community</h5>
+                                <p class="mb-0 text-muted">Our community expanded globally, connecting learners and mentors worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 position-relative d-flex justify-content-md-start justify-content-center">
+                            <span class="journey-dot journey-dot-animated bg-gradient-blue-glow" data-aos="zoom-in"></span>
+                        </div>
+                    </div>
+                    <!-- Milestone 4 -->
+                    <div class="row journey-row align-items-center flex-md-row-reverse">
+                        <div class="col-md-6 d-flex justify-content-md-start justify-content-center">
+                            <div class="journey-card glass-card text-center" data-aos="fade-left">
+                                <div class="journey-icon-float bounceIn"><span>💡</span></div>
+                                <div class="journey-badge journey-badge-3d bg-gradient-purple mb-2 mx-auto"><span>2024</span></div>
+                                <h5 class="fw-bold mb-1 journey-title">Shaping the Future</h5>
+                                <p class="mb-0 text-muted">We continue to innovate and inspire, shaping the future of education and careers.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 position-relative d-flex justify-content-md-end justify-content-center">
+                            <span class="journey-dot journey-dot-animated bg-gradient-purple-glow" data-aos="zoom-in"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+        .journey-bg-pattern {
+            min-width: 900px;
+            max-width: 100vw;
+            height: 180px;
+            pointer-events: none;
+        }
+        .journey-timeline {
+            position: relative;
+            padding: 40px 0 0 0;
+        }
+        .journey-line {
+            position: absolute;
+            top: 0; left: 50%;
+            width: 10px;
+            height: 100%;
+            background: linear-gradient(180deg, #3b82f6 0%, #7c3aed 100%);
+            border-radius: 8px;
+            transform: translateX(-50%);
+            z-index: 0;
+            opacity: 0.22;
+        }
+        .journey-line-animated {
+            animation: journeyLineGlow 3s ease-in-out infinite alternate;
+        }
+        @keyframes journeyLineGlow {
+            0% { box-shadow: 0 0 24px 0 #3b82f6aa; }
+            100% { box-shadow: 0 0 48px 8px #7c3aed99; }
+        }
+        .journey-dot {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            margin: 0 0 0 -19px;
+        }
+        .journey-dot-animated {
+            animation: journeyDotGlow 2s infinite alternate;
+        }
+        @keyframes journeyDotGlow {
+            0% { box-shadow: 0 0 16px 4px #7c3aed44, 0 2px 8px #3b82f644; }
+            100% { box-shadow: 0 0 32px 12px #3b82f6aa, 0 2px 8px #7c3aed88; }
+        }
+        .bg-gradient-blue {
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            color: #fff;
+        }
+        .bg-gradient-purple {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            color: #fff;
+        }
+        .bg-gradient-blue-glow {
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            box-shadow: 0 0 16px 4px #3b82f6aa;
+        }
+        .bg-gradient-purple-glow {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            box-shadow: 0 0 16px 4px #7c3aedaa;
+        }
+        .journey-card {
+            min-width: 240px;
+            max-width: 360px;
+            background: rgba(255,255,255,0.65);
+            box-shadow: 0 8px 32px 0 rgba(123, 97, 255, 0.13);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 1.7rem;
+            border: 1.5px solid rgba(123, 97, 255, 0.13);
+            margin-bottom: 0;
+            position: relative;
+            z-index: 2;
+            transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+            border-left: 4px solid #3b82f6;
+        }
+        .journey-card:hover {
+            box-shadow: 0 12px 36px 0 #3b82f655, 0 2px 8px 0 #7c3aed55;
+            transform: translateY(-10px) scale(1.05) rotate(-1deg);
+            border-color: #7c3aed;
+        }
+        .journey-badge {
+            display: inline-block;
+            padding: 0.5em 1.3em;
+            border-radius: 1.5em;
+            font-weight: 700;
+            font-size: 1.2em;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.2em;
+            box-shadow: 0 4px 16px #3b82f622;
+            font-family: 'Poppins', 'Inter', Arial, sans-serif;
+        }
+        .journey-badge-3d {
+            box-shadow: 0 6px 18px #7c3aed33, 0 2px 8px #3b82f633;
+            border: 2.5px solid #fff;
+        }
+        .journey-icon-float {
+            position: absolute;
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5rem;
+            filter: drop-shadow(0 4px 16px #7c3aed33);
+            z-index: 3;
+            opacity: 0.98;
+            animation: bounceIn 1.2s;
+        }
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: translateX(-50%) scale(0.7); }
+            60% { opacity: 1; transform: translateX(-50%) scale(1.15); }
+            80% { transform: translateX(-50%) scale(0.95); }
+            100% { opacity: 1; transform: translateX(-50%) scale(1); }
+        }
+        .journey-title {
+            font-family: 'Poppins', 'Inter', Arial, sans-serif;
+            font-size: 1.35rem;
+            color: #3b82f6;
+            letter-spacing: 0.01em;
+        }
+        @media (max-width: 991px) {
+            .journey-card { max-width: 100%; min-width: 0; }
+        }
+        @media (max-width: 767px) {
+            .journey-timeline { padding: 20px 0 0 0; }
+            .journey-line { left: 20px; width: 7px; }
+            .journey-dot { margin: 0 0 0 -3px; }
+            .journey-row { flex-direction: column !important; }
+            .journey-card { margin-bottom: 2rem; text-align: center !important; }
+            .journey-icon-float { top: -32px; font-size: 2rem; }
+        }
+        .journey-card.text-center .journey-badge,
+        .journey-card.text-center .journey-icon-float,
+        .journey-card.text-center .journey-title,
+        .journey-card.text-center p {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        .journey-card.text-center .journey-title {
+            text-align: center;
+        }
+        .journey-card.text-center p {
+            text-align: center;
+            max-width: 90%;
+        }
+        .journey-card {
+            padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+        }
+        @media (max-width: 767px) {
+            .journey-card {
+                padding: 1.5rem 0.5rem 1.2rem 0.5rem;
+            }
+        }
+        </style>
+
+        <!-- Our Core Team Section (Modern, Friendly, Animated) -->
+        <section id="core-team" class="mb-5 py-5" style="background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%); font-family: 'Inter', 'Poppins', Arial, sans-serif;">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5" style="color:#7c3aed;">Our Core Team</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                        <div class="team-card h-100 p-4 text-center">
+                            <div class="team-img-wrap mx-auto mb-3">
+                                <img src="img/pro1.svg" alt="Vivek K" class="team-img">
+                            </div>
+                            <h5 class="fw-semibold mb-1">Vivek K</h5>
+                            <div class="text-primary mb-1" style="font-size:1rem;">Co-founder & CEO</div>
+                            <div class="mb-2 text-muted" style="font-size:0.98rem;">Empowering learners with tech</div>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="team-social text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="team-social text-dark"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-card h-100 p-4 text-center">
+                            <div class="team-img-wrap mx-auto mb-3">
+                                <img src="img/pro1.svg" alt="Mazharul Haque" class="team-img">
+                            </div>
+                            <h5 class="fw-semibold mb-1">Mazharul Haque</h5>
+                            <div class="text-primary mb-1" style="font-size:1rem;">Tech Lead</div>
+                            <div class="mb-2 text-muted" style="font-size:0.98rem;">Building future-ready solutions</div>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="team-social text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="team-social text-dark"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-card h-100 p-4 text-center">
+                            <div class="team-img-wrap mx-auto mb-3">
+                                <img src="img/pro1.svg" alt="Alok Kumar" class="team-img">
+                            </div>
+                            <h5 class="fw-semibold mb-1">Alok Kumar</h5>
+                            <div class="text-primary mb-1" style="font-size:1rem;">Mentor</div>
+                            <div class="mb-2 text-muted" style="font-size:0.98rem;">Guiding students to success</div>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="team-social text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="team-social text-dark"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more team members as needed -->
+                </div>
+            </div>
+        </section>
+        <style>
+        #core-team {
+            border-radius: 2rem;
+        }
+        .team-card {
+            background: rgba(255,255,255,0.55);
+            box-shadow: 0 4px 24px 0 rgba(123, 97, 255, 0.10);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(123, 97, 255, 0.10);
+            transition: box-shadow 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .team-card:hover {
+            box-shadow: 0 8px 32px 0 #3b82f633, 0 2px 8px 0 #7c3aed33;
+            transform: translateY(-8px) scale(1.04);
+        }
+        .team-img-wrap {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 100%);
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px #7c3aed22;
+            transition: box-shadow 0.3s;
+        }
+        .team-card:hover .team-img-wrap {
+            box-shadow: 0 4px 16px #3b82f655, 0 2px 8px #7c3aed33;
+        }
+        .team-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .team-card:hover .team-img {
+            transform: scale(1.08);
+        }
+        .team-social {
+            font-size: 1.2rem;
+            padding: 0.4rem;
+            border-radius: 50%;
+            background: #f3f4f6;
+            transition: background 0.2s, color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .team-social:hover {
+            background: #e0e7ff;
+            color: #7c3aed !important;
+        }
+        @media (max-width: 767px) {
+            #core-team { border-radius: 1rem; }
+            .team-card { border-radius: 1rem; }
+            .team-img-wrap { width: 80px; height: 80px; }
+            .team-img { width: 70px; height: 70px; }
+        }
+        </style>
+
+            <!-- Call to Action Section -->
+            <section id="call-to-action" class="text-center bg-light p-5">
+                <h2>Join Us on Our Journey</h2>
+                <p class="mb-4">Be a part of something bigger. Together, we can achieve incredible things and shape the
+                    future.</p>
+                <a href="apply-now.html" class="btn btn-primary">Apply Now</a>
+            </section>
+        </div>
+    </div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-3 col-sm-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+                    data-aos-duration="1200" data-aos-once="false">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a aria-current="page" class="" href="/">
+                                <img src="img/Iroots.png" alt="logo" width="130">
+                            </a>
+                        </div>
+                        <p>Our goal is to empower the next generation of tech leaders.
+                            Our internship program offers hands-on experience in different fields.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8294624055</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>internsroot@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">InternsRoot 2024</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom" href="#">Vivek (Ovi)</a><br><br> -->
+                        Secure your Tommorow , Start Today With <a class="border-bottom" href="">InternsRoot</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!" target="_blank"
+        class="btn btn-lg btn-primary btn-lg-square whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

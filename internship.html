@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>InternsRoot</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .hero {
+            background: linear-gradient(to right, #0062cc, #33b5e5);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .program-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonials {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .testimonial-card {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .apply-btn {
+            background: #0fa5dc;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .apply-btn:hover {
+            background: #0bceec;
+        }
+
+
+        /* Custom Styling */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .form-control-icon i {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            font-size: 20px;
+        }
+
+        .form-control-icon input {
+            padding-left: 35px;
+        }
+
+        .contact-box {
+            border: 2px solid #62C2FF;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            background-color: #f4faff;
+        }
+
+        .contact-box i {
+            font-size: 40px;
+            color: #62C2FF;
+        }
+
+        .contact-box h4 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .contact-box button {
+            background-color: #62C2FF;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .contact-box button:hover {
+            background-color: #5aabd9;
+        }
+
+        .info-box {
+            background-color: #f7f7f7;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .info-box i {
+            font-size: 50px;
+            color: #62C2FF;
+            margin-bottom: 20px;
+        }
+
+        .info-box h4 {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .info-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Custom Styling */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .form-control-icon i {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            font-size: 20px;
+        }
+
+        .form-control-icon input {
+            padding-left: 35px;
+        }
+
+        .contact-box {
+            border: 2px solid #62C2FF;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            background-color: #f4faff;
+        }
+
+        .contact-box i {
+            font-size: 40px;
+            color: #62C2FF;
+        }
+
+        .contact-box h4 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .contact-box button {
+            background-color: #62C2FF;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .contact-box button:hover {
+            background-color: #5aabd9;
+        }
+
+        .info-box {
+            background-color: #f7f7f7;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        .info-box i {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .info-box h4 {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .info-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Flexbox Layout for Horizontal Boxes */
+        .info-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-box-1 i {
+            color: #FF6347;
+            /* Tomato Red */
+        }
+
+        .info-box-2 i {
+            color: #32CD32;
+            /* Lime Green */
+        }
+
+        .info-box-3 i {
+            color: #FFD700;
+            /* Gold */
+        }
+
+        .info-box-4 i {
+            color: #1E90FF;
+            /* Dodger Blue */
+        }
+
+        /* <!-- Custom CSS --> */
+   
+        #toggleBtn {
+            transition: 0.3s;
+        }
+
+        /* testimonial */
+        .testimonial-card {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .testimonial-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .stars {
+            color: #FFD700;
+            font-size: 18px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <!-- <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>InternsRoot</h2> -->
+            <img src="img/irrrr.svg" alt="InternsRoot Logo" height="70">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="services.html" class="nav-item nav-link">Service</a>
+                <a href="internship.html" class="nav-item nav-link">internship</a>
+                <a href="verify.html" class="nav-item nav-link">verify</a>
+                <a href="career.html" class="nav-item nav-link">Career</a>
+                <a href="bloogs.html" class="nav-item nav-link">I Root</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="about-us.html" class="dropdown-item">About Us</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="apply.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Aplly Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Section Start with suitable background image -->
+<section class="hero d-flex align-items-center justify-content-center" style="position: relative; min-height: 350px; text-align: center; background: url('img/internship home.jpg') center center/cover no-repeat;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(24, 29, 56, 0.6);"></div>
+  <div class="container position-relative" style="z-index: 2;">
+    <h1 class="display-3 text-white fw-bold mb-3">Kickstart Your Career with Our Internship Programs</h1>
+    <p class="fs-5 text-white mb-4">Gain real-world experience, enhance your skills, and work on exciting projects with industry experts.</p>
+    <a href="#apply" class="btn btn-primary py-md-3 px-md-5">Apply Now</a>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+    <!-- Service Section Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="section-title bg-white text-center text-primary px-3">Our Services</h6>
+                <h1 class="mb-5">What We Offer</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Skilled Instructors</h5>
+                            <p>Learn from experienced instructors who provide valuable insights and practical knowledge.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-laptop text-primary mb-4"></i>
+                            <h5 class="mb-3">Online Classes</h5>
+                            <p>Access high-quality online courses that can be completed from anywhere at your
+                                convenience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
+                            <h5 class="mb-3">Internship Programs</h5>
+                            <p>Gain real-world experience through our internship programs and jumpstart your career.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
+                            <h5 class="mb-3">Certification</h5>
+                            <p>Earn recognized certifications to showcase your skills and increase your employability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Section End -->
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Why Choose Our Internship Programs?</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="bi bi-briefcase-fill fs-1 text-primary"></i>
+                <h4 class="mt-3">Hands-On Experience</h4>
+                <p>Work on live projects and solve real-world problems that align with your career aspirations.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-people-fill fs-1 text-success"></i>
+                <h4 class="mt-3">Mentorship</h4>
+                <p>Get guided by experienced professionals who will help shape your career path.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-award-fill fs-1 text-warning"></i>
+                <h4 class="mt-3">Certification</h4>
+                <p>Receive a certificate of completion that validates your skills and achievements.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Our Internship Programs</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="img/webd.svg" class="card-img-top" alt="Web Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Learn front-end and back-end development with modern tools and frameworks.</p>
+                        <a href="https://xwngn0s9.forms.app/internsroot-application" class="btn btn-primary">Quick Apply</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="img/uiux.svg" class="card-img-top" alt="UI/UX Design">
+                    <div class="card-body">
+                        <h5 class="card-title">UI/UX Design</h5>
+                        <p class="card-text">Master the art of creating intuitive and visually appealing user interfaces.</p>
+                        <a href="https://xwngn0s9.forms.app/internsroot-application" class="btn btn-primary">Quick Apply</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="img/dma.svg" class="card-img-top" alt="Digital Marketing">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">Gain expertise in SEO, social media strategies, and performance marketing.</p>
+                        <a href="https://xwngn0s9.forms.app/internsroot-application" class="btn btn-primary">Quick Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hidden section -->
+        <div class="row g-4 mt-4" id="moreCourses" style="display: none;">
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="img/Data s.svg" class="card-img-top" alt="Data Science">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Science</h5>
+                        <p class="card-text">Explore data analysis, visualization, and machine learning techniques.</p>
+                        <a href="https://xwngn0s9.forms.app/internsroot-application" class="btn btn-primary">Quick Apply</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="img/CS.svg" class="card-img-top" alt="Cybersecurity">
+                    <div class="card-body">
+                        <h5 class="card-title">Cybersecurity</h5>
+                        <p class="card-text">Learn to protect systems, networks, and data from cyber threats.</p>
+                        <a href="https://xwngn0s9.forms.app/internsroot-application" class="btn btn-primary">Quick Apply</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card program-card">
+                    <img src="img/cd.svg" class="card-img-top" alt="Cloud Computing">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Computing</h5>
+                        <p class="card-text">Understand cloud infrastructure and services with hands-on practice.</p>
+                        <a href="https://xwngn0s9.forms.app/internsroot-application" class="btn btn-primary">Quick Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button to toggle -->
+        <div class="text-center mt-4">
+            <button id="toggleBtn" class="btn btn-secondary">View More</button>
+        </div>
+    </section>
+    
+    
+    
+    <!-- Custom JavaScript -->
+    <script>
+        document.getElementById("toggleBtn").addEventListener("click", function () {
+            const moreCourses = document.getElementById("moreCourses");
+            if (moreCourses.style.display === "none") {
+                moreCourses.style.display = "flex";
+                this.textContent = "View Less";
+            } else {
+                moreCourses.style.display = "none";
+                this.textContent = "View More";
+            }
+        });
+    </script>
+    
+
+    <section class="container my-5" id="apply">
+        <h2 class="text-center mb-4">Apply for an Internship</h2>
+        <form>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                    <label for="program" class="form-label">Select Program</label>
+                    <select class="form-select" id="program" required>
+                        <option value="">Choose...</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="ui-ux">UI/UX Design</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="resume" class="form-label">Upload Resume</label>
+                    <input type="file" class="form-control" id="resume" required>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+            </div>
+        </form>
+    </section>
+<!--  testimonial start-->
+<section class="testimonials py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">What Our Interns Say</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card p-3">
+                    <img src="img/milant.jpeg" alt="Priya Sharma">
+                    <p>"This internship was a game-changer for me. I learned so much and gained confidence to step into the professional world."</p>
+                    <h5 class="mt-3">- Priya Sharma</h5>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card p-3">
+                    <img src="img/Alokp.jpeg" alt="Rahul Verma">
+                    <p>"The mentorship and hands-on projects made this internship invaluable. Highly recommend it to everyone!"</p>
+                    <h5 class="mt-3">- Rahul Verma</h5>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card p-3">
+                    <img src="img/rahult.jpeg" alt="Ananya Mehta">
+                    <p>"A well-structured internship that provided real-world experience. I now feel more prepared for my career!"</p>
+                    <h5 class="mt-3">- Ananya Mehta</h5>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card p-3">
+                    <img src="img/roshant.png" alt="Siddharth Roy">
+                    <p>"InternsRoot gave me the exposure I needed to improve my technical and problem-solving skills!"</p>
+                    <h5 class="mt-3">- Siddharth Roy</h5>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9732;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Assistant Support Section -->
+    <!-- <section class="py-5">
+        <div class="container"> -->
+            <!-- Title Section -->
+            <!-- <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h2 class="section-title bg-white text-center text-primary px-3">Need Expert Assistance?</h2>
+                    <p class="section-subtitle">
+                        Fill out the form and our dedicated support assistant will reach out to assist you with any
+                        queries or issues.
+                    </p>
+                </div>
+            </div> -->
+
+            <!-- Support Form and Content Section -->
+            <!-- <div class="row justify-content-center"> -->
+                <!-- Left Side: Request Support Form -->
+                <!-- <div class=" col-lg-5">
+                    <div class="contact-box">
+                        <i class="fas fa-headset"></i>
+                        <h4>Request Support</h4>
+                        <form action="#" method="POST"> -->
+                            <!-- Name Field -->
+                            <!-- <div class="mb-3 form-control-icon">
+                                <i class="fas fa-user"></i>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    required>
+                            </div> -->
+                            <!-- Email Field -->
+                            <!-- <div class="mb-3 form-control-icon">
+                                <i class="fas fa-envelope"></i>
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required>
+                            </div> -->
+                            <!-- Phone Number Field -->
+
+                            <!-- <div class="mb-3 form-control-icon">
+                                <i class="fas fa-phone-alt"></i>
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Request Support</button>
+                        </form>
+                    </div>
+                </div> -->
+
+                <!-- Right Side: Support Services -->
+
+                <!-- <div class="col-lg-7">
+                    <div class="info-boxes"> -->
+                        <!-- Service 1: 24/7 Customer Support -->
+
+                        <!-- <div class="info-box info-box-1">
+                            <i class="fas fa-headset"></i>
+                            <h4>24/7 Customer Support</h4>
+                            <p>Our support team is always available to assist with any questions or challenges you face,
+                                day or night.</p>
+                        </div> -->
+                        <!-- Service 2: Technical Assistance -->
+
+                        <!-- <div class="info-box info-box-2">
+                            <i class="fas fa-tools"></i>
+                            <h4>Technical Assistance</h4>
+                            <p>Get expert guidance on troubleshooting and resolving any technical issues you may
+                                encounter.</p>
+                        </div>
+                    </div>
+                    <div class="info-boxes"> -->
+                        <!-- Service 3: Account Management -->
+
+                        <!-- <div class="info-box info-box-3">
+                            <i class="fas fa-user-cog"></i>
+                            <h4>Account Management</h4>
+                            <p>Need help managing your account? Our team is here to assist with setup, troubleshooting,
+                                and more.</p>
+                        </div> -->
+                        <!-- Service 4: Personalized Guidance -->
+
+                        <!-- <div class="info-box info-box-4">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Personalized Guidance</h4>
+                            <p>Receive tailored advice to optimize your experience and make the most out of our
+                                services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+<!-- Frequently Asked Questions Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <h2 class="fw-bold">Frequently Asked Questions</h2>
+            <p class="text-muted">Got questions? We've got answers! Explore some of the common queries below.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="accordion" id="faqAccordionLeft">
+                    <!-- Question 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                How long does the internship last?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body">
+                                Our internship program runs for a duration of one month.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                Can I participate in more than one track at a time?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+                            data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body">
+                                To ensure comprehensive learning, students can enroll in only one track per month.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                Is the internship free?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
+                            data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body">
+                                The internship is free, but a ₹119 processing fee is applicable for documentation.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                When will I get my Offer Letter?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
+                            data-bs-parent="#faqAccordionLeft">
+                            <div class="accordion-body">
+                                Offer Letters are issued twice a month, around the 1st and 15th.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="accordion" id="faqAccordionRight">
+                    <!-- Question 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                When does the internship start?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive"
+                            data-bs-parent="#faqAccordionRight">
+                            <div class="accordion-body">
+                                Internships begin on the 1st and 15th of every month.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                                How do I submit my tasks?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqHeadingSix"
+                            data-bs-parent="#faqAccordionRight">
+                            <div class="accordion-body">
+                                A submission form is emailed within 10-15 days of receiving the Offer Letter.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseSeven" aria-expanded="false" aria-controls="faqCollapseSeven">
+                                When will I receive my Certificate?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseSeven" class="accordion-collapse collapse" aria-labelledby="faqHeadingSeven"
+                            data-bs-parent="#faqAccordionRight">
+                            <div class="accordion-body">
+                                Certificates are issued on the 1st or 16th of the following month after internship completion.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqCollapseEight" aria-expanded="false" aria-controls="faqCollapseEight">
+                                How can I contact support?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseEight" class="accordion-collapse collapse" aria-labelledby="faqHeadingEight"
+                            data-bs-parent="#faqAccordionRight">
+                            <div class="accordion-body">
+                                You can contact us via email or through our official website.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-3 col-sm-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+                    data-aos-duration="1200" data-aos-once="false">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a aria-current="page" class="" href="/">
+                                <img src="img/Iroots.png" alt="logo" width="130">
+                            </a>
+                        </div>
+                        <p>Our goal is to empower the next generation of tech leaders.
+                            Our internship program offers hands-on experience in different fields.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8294624055</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>internsroot@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">InternsRoot 2024</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom" href="#">Vivek (Ovi)</a><br><br> -->
+                        Secure your Tommorow , Start Today With <a class="border-bottom" href="">InternsRoot</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!" target="_blank"
+        class="btn btn-lg btn-primary btn-lg-square whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

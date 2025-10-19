@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternsRoot Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .course-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        .category-item {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .category-item:hover,
+        .category-item.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .courses {
+            flex-grow: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f9f9f9;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            background: #e9ecef;
+        }
+
+        .course-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .course-info h5 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .course-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .know-more {
+            background: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .know-more:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Explore Our Courses</h2>
+        <div class="course-container">
+            
+            <!-- Sidebar (Course Categories) -->
+            <div class="sidebar">
+                <h5 class="text-center">Course Categories</h5>
+                <div class="category-item active" onclick="showCourses('tech')">Tech</div>
+                <div class="category-item" onclick="showCourses('business')">Business</div>
+                <div class="category-item" onclick="showCourses('marketing')">Marketing</div>
+                <div class="category-item" onclick="showCourses('mechanics')">Mechanics</div>
+                <div class="category-item" onclick="showCourses('medical')">Medical</div>
+                <div class="category-item" onclick="showCourses('design')">Design</div>
+                <div class="category-item" onclick="showCourses('bootcamp')">Bootcamp</div>
+            </div>
+
+            <!-- Courses Display -->
+            <div class="courses">
+                <h4 id="courseTitle">Tech Courses</h4>
+                <div id="courseList">
+                    <!-- Courses will be injected here dynamically -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Sample Course Data
+        const courses = {
+            tech: [
+                { name: "Web Development", desc: "Master Web Fundamentals to Build Your Own Website", duration: "2 Months", mentees: "20k+", image: "img/aa.png" },// image size 80x80 
+                { name: "Android Development", desc: "Master Android Programming to Create Your Own Mobile", duration: "2 Months", mentees: "20k+", image: "https://source.unsplash.com/80x80/?android,app" },
+                { name: "Cyber Security", desc: "Master Cloud Security to Safeguard Your Digital Assets", duration: "2 Months", mentees: "20k+", image: "https://source.unsplash.com/80x80/?cyber,security" }
+            ],
+            business: [
+                { name: "Business Analytics", desc: "Learn how to analyze business trends", duration: "5 Months", mentees: "15k+", image: "https://source.unsplash.com/80x80/?business,chart" },
+                { name: "Entrepreneurship Fundamentals", desc: "Build your own startup from scratch", duration: "3 Months", mentees: "12k+", image: "https://source.unsplash.com/80x80/?startup,entrepreneur" }
+            ],
+            marketing: [
+                { name: "Digital Marketing", desc: "Master SEO, PPC, and content marketing", duration: "4 Months", mentees: "18k+", image: "https://source.unsplash.com/80x80/?marketing,seo" },
+                { name: "Social Media Marketing", desc: "Grow brands using social media platforms", duration: "3 Months", mentees: "16k+", image: "https://source.unsplash.com/80x80/?socialmedia,ads" }
+            ],
+            mechanics: [
+                { name: "Automobile Engineering", desc: "Learn the fundamentals of vehicle design", duration: "5 Months", mentees: "10k+", image: "https://source.unsplash.com/80x80/?car,engineering" }
+            ],
+            medical: [
+                { name: "Medical Coding", desc: "Master medical data processing", duration: "3 Months", mentees: "8k+", image: "https://source.unsplash.com/80x80/?doctor,medical" }
+            ],
+            design: [
+                { name: "UI/UX Designing", desc: "Create stunning user experiences", duration: "4 Months", mentees: "14k+", image: "https://source.unsplash.com/80x80/?design,uiux" }
+            ],
+            bootcamp: [
+                { name: "Software Engineering Bootcamp", desc: "Fast-track your software career", duration: "6 Months", mentees: "25k+", image: "https://source.unsplash.com/80x80/?programming,code" }
+            ]
+        };
+
+        function showCourses(category) {
+            // Change Sidebar Active Class
+            document.querySelectorAll(".category-item").forEach(item => item.classList.remove("active"));
+            event.target.classList.add("active");
+
+            // Update Course Title
+            const courseTitle = category.charAt(0).toUpperCase() + category.slice(1);
+            document.getElementById("courseTitle").innerText = courseTitle + " Courses";
+
+            // Update Course List
+            const courseList = document.getElementById("courseList");
+            courseList.innerHTML = ""; // Clear previous courses
+
+            courses[category].forEach(course => {
+                const courseCard = document.createElement("div");
+                courseCard.classList.add("course-card");
+                courseCard.innerHTML = `
+                    <img src="${course.image}" class="course-image" alt="${course.name}">
+                    <div class="course-info">
+                        <h5>${course.name}</h5>
+                        <p>${course.desc}</p>
+                        <p><strong>${course.duration}</strong> &bull; ${course.mentees} Mentees</p>
+                        <a href="#" class="know-more">Know More</a>
+                    </div>
+                `;
+                courseList.appendChild(courseCard);
+            });
+        }
+
+        // Load Default Courses
+        showCourses('tech');
+    </script>
+
+</body>
+
+</html>
